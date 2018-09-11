@@ -4,7 +4,7 @@ Boat::Boat(char id){
 	if (id != 'b'){
 		this->id = id;
 	}else{
-		
+		cout << "nao pode";
 	}
 }
 
