@@ -10,14 +10,21 @@
 
 using namespace std;
 
+struct Boat{
+	int  size;
+	int  border_size;
+	char id;
+	Boat(char id);
+};
+
 struct Battle_map{
 	int height;
 	int width;
-	int **grid; ///[y][x] = 0 for water; [y][x] > 0 for ship
+	char **grid; ///w for water
 	void clear(void);
 	Battle_map(int width, int height);
-	void place_a_ship(int x, int y, int size, char direction);///place a ship of the selected size in the selected direction if its possible
-	bool have_space_at(int x, int y, int size, char direction);///Return true if you can place a ship of selected size in the selected direction at the position
+	void place_a_ship(int x, int y, Boat cockboat, char direction);///place a ship of the selected size in the selected direction if its possible
+	bool have_space_at(int x, int y, Boat cockboat, char direction);///Return true if you can place a ship of selected size in the selected direction at the position
 };
 
 

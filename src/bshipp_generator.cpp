@@ -1,17 +1,26 @@
 #include "../include/bshipp_generator.hpp"
+//Boat functions and constructor
+Boat::Boat(char id){
+	if (id != 'b'){
+		this->id = id;
+	}else{
+		
+	}
+}
+
 
 //Battle_map functions and constructor
 Battle_map::Battle_map(int width, int height){
 	this->width  = width;
 	this->height = height;
-	this->grid = (int**) malloc (height * sizeof(int*));
+	this->grid = (char**) malloc (height * sizeof(char*));
 	for(int i(0); i < height; i++){
-		this->grid[i] = (int*) malloc (width * sizeof(int));
+		this->grid[i] = (char*) malloc (width * sizeof(char));
 	}
 	//filling grid with water
 	for(int i(0); i < height; i++){
 		for(int j(0); j < width; j++){
-			this->grid[i][j] = 0;
+			this->grid[i][j] = 'w';
 		}
 	}
 }
@@ -23,25 +32,31 @@ void Battle_map::clear(void){
 	delete [] this->grid;
 }
 
-void Battle_map::place_a_ship(int x, int y, int size, char direction){
-	if (this->have_space_at(x, y, size, direction)){
-		for(int n(0); n < size; n++){
+void Battle_map::place_a_ship(int x, int y, Boat cockboat, char direction){
+	if (this->have_space_at(x, y, cockboat, direction)){
+		for(int n(0); n < cockboat.size; n++){
 			switch(direction){
 				case 'h':
-					for(auto n(0); n < size; n++) this->grid[y][x+n] = n+1; 
+					for(auto n(0); n < size; n++){
+						this->grid[y][x+n] = cockboat.id;
+					}
 					break;
 				case 'v':
-					for(auto n(0); n < size; n++) this->grid[y+n][x] = n+1; 
+					for(auto n(0); n < size; n++){
+						this->grid[y+n][x] = cockboat.id;
+					}
 					break;
 			}
 		}
 	}
 }
 
-bool Battle_map::have_space_at(int x, int y, int size, char direction){
+bool Battle_map::have_space_at(int x, int y, Boat cockboat, char direction){
+	// if is after or before the map border
 	if (x >= this->width || x < this->width) return false;
 	if (y >= this->height || y < this->height) return false;
 
+	// if the size doesn't fit
 	switch(direction){
 		case 'h':
 			if((x+size) >= this->width || (x+size) < this->width) return false;
@@ -49,6 +64,11 @@ bool Battle_map::have_space_at(int x, int y, int size, char direction){
 		case 'v':
 			if((y+size) >= this->height || (y+size) < this->height) return false;
 			break;
+	}
+
+	//if there's a boat around
+	if (){
+		/* code */
 	}
 	return true;
 }
