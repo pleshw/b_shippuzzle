@@ -1,22 +1,22 @@
 #include "../include/bshipp_generator.hpp"
 //Boat functions and constructor
-Boat::Boat(char id){
-	if (id != 'b'){
-		this->id = id;
-	}else{
-		cout << "nao pode";
-	}
+Boat::Boat(char id, int size){
+	this->id   = id;
+	this->size = size;
 }
-
 
 //Battle_map functions and constructor
 Battle_map::Battle_map(int width, int height){
+	//get the dimensions
 	this->width  = width;
 	this->height = height;
-	this->grid = (char**) malloc (height * sizeof(char*));
+	
+	//allocate grid
+	this->grid = new char*[height];
 	for(int i(0); i < height; i++){
-		this->grid[i] = (char*) malloc (width * sizeof(char));
+		this->grid[i] = new char(width);
 	}
+
 	//filling grid with water
 	for(int i(0); i < height; i++){
 		for(int j(0); j < width; j++){
@@ -24,34 +24,71 @@ Battle_map::Battle_map(int width, int height){
 		}
 	}
 }
-
-void Battle_map::clear(void){
+//delete the memory allocated for the map
+Battle_map::~Battle_map(){
 	for(int i(0); i < this->height; i++){
-			delete [] this->grid[i];
+		delete [] this->grid[i];
 	}
 	delete [] this->grid;
 }
 
-void Battle_map::place_a_ship(int x, int y, Boat cockboat, char direction){
-	if (this->have_space_at(x, y, cockboat, direction)){
-		for(int n(0); n < cockboat.size; n++){
-			switch(direction){
-				case 'h':
-					for(auto n(0); n < size; n++){
-						this->grid[y][x+n] = cockboat.id;
-					}
-					break;
-				case 'v':
-					for(auto n(0); n < size; n++){
-						this->grid[y+n][x] = cockboat.id;
-					}
-					break;
+
+
+//place a ship in a position
+void Battle_map::place_a_ship(int x, int y, Boat vessel, char direction){
+	switch(direction){
+		case 'h':
+		//draw boat
+			this->grid[y-1][x-1] = 'b';
+			this->grid[y]  [x-1] = 'b';
+			this->grid[y+1][x-1] = 'b';
+
+			this->grid[y-1][x+vessel.size] = 'b';
+			this->grid[y]  [x+vessel.size] = 'b';
+			this->grid[y+1][x+vessel.size] = 'b';
+
+			for(auto n(0); n < vessel.size; n++){
+				this->grid[y+1][x+n] = 'b'; //border
+				this->grid[y]  [x+n] = vessel.id;
+				this->grid[y-1][x+n] = 'b';
 			}
-		}
+		break;
+	
+		case 'v':
+		//draw boat
+			this->grid[y-1][x-1] = 'b';
+			this->grid[y-1][x] = 'b';
+			this->grid[y-1][x+1] = 'b';
+
+			this->grid[y+vessel.size][x-1] = 'b';
+			this->grid[y+vessel.size][x] = 'b';
+			this->grid[y+vessel.size][x+1] = 'b';
+
+			for(auto n(0); n < vessel.size; n++){
+				this->grid[y+n][x+1] = 'b'; //border
+				this->grid[y+n][x] = vessel.id;
+				this->grid[y+n][x-1] = 'b'; //border
+			}
+		break;
+
+		default:
+		//draw boat
+			this->grid[y-1][x-1] = 'b';
+			this->grid[y]  [x-1] = 'b';
+			this->grid[y+1][x-1] = 'b';
+
+			this->grid[y-1][x+vessel.size] = 'b';
+			this->grid[y]  [x+vessel.size] = 'b';
+			this->grid[y+1][x+vessel.size] = 'b';
+			for(auto n(0); n < vessel.size; n++){
+				this->grid[y][x+n] = vessel.id;
+			}			
+		break;
 	}
 }
 
-bool Battle_map::have_space_at(int x, int y, Boat cockboat, char direction){
+//verify if a ship can be placed in that position
+bool Battle_map::have_space_at(int x, int y, Boat vessel, char direction){
 	// if is after or before the map border
 	if (x >= this->width || x < this->width) return false;
 	if (y >= this->height || y < this->height) return false;
@@ -59,42 +96,29 @@ bool Battle_map::have_space_at(int x, int y, Boat cockboat, char direction){
 	// if the size doesn't fit
 	switch(direction){
 		case 'h':
-			if((x+size) >= this->width || (x+size) < this->width) return false;
-			break;
+		if((x+vessel.size) >= this->width || (x+vessel.size) < this->width) return false;
+		break;
 		case 'v':
-			if((y+size) >= this->height || (y+size) < this->height) return false;
-			break;
+		if((y+vessel.size) >= this->height || (y+vessel.size) < this->height) return false;
+		break;
 	}
 
-	//if there's a boat around
-	if (){
-		/* code */
-	}
+
 	return true;
 }
 
 
-//Map_gen functions
+//Map_generator functions
+void Map_generator::new_map(int width, int height){
+	Map_list.emplace_back(width, height);
+}
 
-void Map_gen::new_map(int width, int height){
-
-	Battle_map tmp_map(width, height);
-
-	this->All_maps.insert(tmp_map);
-	
-	for(int i(0); i < this->All_maps.back().height; i++){
-		for(int j(0); j < this->All_maps.back().width; j++){
-			cout << this->All_maps.back().grid[i][j] << " ";
+void Map_generator::view_last(void){
+	cout << endl;
+	for(int i(0); i < this->Map_list.back().height; i++){
+		for(int j(0); j < this->Map_list.back().width; j++){
+			cout << this->Map_list.back().grid[i][j] << " ";
 		}
 		cout << endl;
 	}
-	cout << endl << endl;
-}
-
-
-
-
-
-void Map_gen::save(){
-
 }

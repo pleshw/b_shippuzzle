@@ -3,11 +3,15 @@
 
 using namespace std;
 
-int main(int argc, char const *argv[]){
+int main(){
 	
-	Map_gen generator;
+	Boat Battle_ship('S', 4), Cruiser('c', 3), Destroyer('d', 2), Submarine('s', 1);
 
-	generator.new_map(10, 10);
+	Map_generator generator;
+
+	generator.new_map(15, 15);
+
+	generator.view_last();
 
 	return 0;
 }
