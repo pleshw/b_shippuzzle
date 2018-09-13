@@ -9,9 +9,13 @@ int main(){
 
 	Map_generator generator;
 
-	generator.new_map(10, 10);
+	generator.new_map(20, 20);
 
 	generator.view_last();
 
 	return 0;
 }
+
+
+
+

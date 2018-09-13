@@ -22,7 +22,7 @@ struct Battle_map{
 	unsigned long  width;
 	char          **grid; ///w for water //b for border //id for boat
 	
-	void place_a_ship(unsigned int x, unsigned int y,       Boat vessel, char direction);///place a ship of the selected size in the selected direction if its possible
+	void place_a_ship(unsigned int x, unsigned int y,       Boat & vessel, char direction);///place a ship of the selected size in the selected direction if its possible
 	bool in_map_range(unsigned int x, unsigned int y, unsigned int size, char direction);///Return true if you can place a ship of selected size in the selected direction at the position
 
 	Battle_map(unsigned long const width, unsigned long const height);
