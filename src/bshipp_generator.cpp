@@ -15,16 +15,11 @@ Battle_map::Battle_map(unsigned long width, unsigned long height){
 	this->grid = new char*[height];
 	for(unsigned long i(0); i < height; i++){
 		this->grid[i] = new char(width);
-	}
-
-	//filling grid with water
-	for(unsigned long i(0); i < height; i++){
+		//filling with water
 		for(unsigned long j(0); j < width; j++){
 			this->grid[i][j] = '~';
 		}
 	}
-
-	
 }
 //delete the memory allocated for the map
 Battle_map::~Battle_map(){
@@ -173,6 +168,35 @@ bool Battle_map::in_map_range(unsigned int x, unsigned int y, unsigned int size,
 	}
 	return false;
 }
+// //verify collision with border and with other boats
+// bool Battle_map::verify_collision(unsigned int x, unsigned int y, Boat & vessel, char direction){
+
+// 	cout << endl << endl << "----------------------------" << endl
+// 		 << ">>place_a_ship log." << endl;
+
+// 	cout << "--Input details-- " << endl;
+// 	cout << "X: " << x << endl;
+// 	cout << "Y: " << y << endl;
+// 	cout << "Boat Size: " << vessel.size << endl;
+// 	cout << "Direction: " << direction << endl << endl;
+
+// 	cout << "--Map details-- " << endl;
+// 	cout << "With: "   << this->width  << endl;
+// 	cout << "Height: " << this->height << endl << endl;
+
+
+// 	cout << "--More details-- " << endl;
+// 	if (direction == 'h'){
+// 		cout << "From: " <<  x              << " " << y << endl;
+// 		cout << "To: "   << (x+vessel.size) << " " << y << endl << endl;
+// 	}
+
+// 	if (direction == 'v'){
+// 		cout << "From: " << x << " " <<  y              << endl;
+// 		cout << "To: "   << x << " " << (y+vessel.size) << endl << endl;
+// 	}
+
+// }
 
 
 /////------------------------------------------------------------------------------Map_generator functions

@@ -10,6 +10,7 @@
 
 using namespace std;
 
+
 struct Boat{
 	char id;
 	unsigned int size;
