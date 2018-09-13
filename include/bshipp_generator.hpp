@@ -7,9 +7,9 @@
 #include <string>
 #include <iterator>
 #include <vector> 
+#include <iomanip>
 
 using namespace std;
-
 
 struct Boat{
 	char id;
@@ -30,7 +30,7 @@ struct Battle_map{
 	~Battle_map();
 };
 
-
+ostream& operator<<( std::ostream& os, const Battle_map & mapa );
 
 class Map_generator{
 private:

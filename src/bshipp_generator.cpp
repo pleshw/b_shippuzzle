@@ -1,9 +1,35 @@
 #include "../include/bshipp_generator.hpp"
+
+/////-------------------------------------------------------------SOBRECARGAS
+
+//output battlemap
+ostream& operator<< ( std::ostream& os, const Battle_map & mapa ){
+	string printar;
+	for (unsigned long i(0); i < mapa.height; i++){
+		for (unsigned long j(0); j < mapa.width; j++){
+			printar += mapa.grid[i][j];
+			printar += " "; 
+		}
+		printar += "\n";
+	}
+	os << printar;
+	return os;
+}
+
+
+
+
+
+
+
 /////-------------------------------------------------------------Boat functions and constructor
 Boat::Boat(char id, unsigned int size){
 	this->id   = id;
 	this->size = size;
 }
+
+
+
 
 /////--------------------------------------------------------------Battle_map functions and constructor
 Battle_map::Battle_map(unsigned long width, unsigned long height){
@@ -28,6 +54,12 @@ Battle_map::~Battle_map(){
 	}
 	delete [] this->grid;
 }
+
+
+
+
+
+
 //place a ship in a position
 void Battle_map::place_a_ship(unsigned int x, unsigned int y, Boat & vessel, char direction){
 	cout << endl << endl << "----------------------------" << endl
@@ -234,11 +266,5 @@ void Map_generator::view_last(void){
 	cout << "Width: "  << this->Map_list.back().width << endl;
 	cout << "Height: " << this->Map_list.back().width << endl;
 
-	cout << endl;
-	for(unsigned long i(0); i < this->Map_list.back().height; i++){
-		for(unsigned long j(0); j < this->Map_list.back().width; j++){
-			cout << this->Map_list.back().grid[i][j] << " ";
-		}
-		cout << endl;
-	}
+	cout << this->Map_list.back();
 }
