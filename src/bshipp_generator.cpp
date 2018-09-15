@@ -1,7 +1,6 @@
 #include "../include/bshipp_generator.hpp"
 
 /////-------------------------------------------------------------SOBRECARGAS
-
 //output battlemap
 ostream& operator<< ( std::ostream& os, const Battle_map & mapa ){
 	string printar;
@@ -15,6 +14,12 @@ ostream& operator<< ( std::ostream& os, const Battle_map & mapa ){
 	os << printar;
 	return os;
 }
+//output coordenada
+ostream& operator<< ( std::ostream& os, const Coords & coordenada ){
+	os << coordenada.x << " " << coordenada.y;
+	return os;
+}
+
 
 /////--------------------------------------------------------------------------------------------------------
 // CONSTRUCTORS AND DESTRUCTORS
@@ -94,6 +99,10 @@ void Battle_map::place_a_ship(unsigned int x, unsigned int y, Boat & vessel, cha
 						}
 					}
 				}
+			//add to ship list
+				vessel.position.x = x;
+				vessel.position.y = y;
+				this->Ship_list.push_back(vessel);
 			break;
 	
 			case 'v':
@@ -126,6 +135,10 @@ void Battle_map::place_a_ship(unsigned int x, unsigned int y, Boat & vessel, cha
 						}
 					}
 				}
+			//add to ship list
+				vessel.position.x = x;
+				vessel.position.y = y;
+				this->Ship_list.push_back(vessel);				
 			break;
 		}
 	}
@@ -159,8 +172,7 @@ bool Battle_map::free_position(unsigned int x, unsigned int y, unsigned int size
 	switch(direction){
 		case 'h':
 			for (unsigned int i(0); i < size; i++){
-				if (this->grid[y][x+i] != '~'){
-					// cout << endl << "------position " << x+i << " " << y << " is not water" << endl << endl; 
+				if (this->grid[y][x+i] != '~'){ 
 					return false;
 				}
 			}
@@ -169,7 +181,6 @@ bool Battle_map::free_position(unsigned int x, unsigned int y, unsigned int size
 		case 'v':
 			for (unsigned int i(0); i < size; i++){
 				if (this->grid[y+i][x] != '~'){
-					// cout << endl << "------position " << x << " " << y+i << " is not water" << endl << endl;
 					return false;
 				}
 			}
@@ -198,5 +209,21 @@ void Map_generator::new_map(unsigned long width, unsigned long height){
 }
 
 void Map_generator::view_last(void){
-	cout << this->Map_list.back();
+	cout << endl << endl << this->Map_list.back() << endl;
+}
+
+void Map_generator::save_all(void){
+	this->save_file.open("mapas.txt");
+
+	for(unsigned int i(0); i < this->Map_list.size(); i++){
+		this->save_file << "mapa: " << this->Map_list.back().width << " " << this->Map_list.back().height << endl;	
+		for(unsigned int j(0); j < this->Map_list[i].Ship_list.size(); j++){
+			this->save_file << "id: "   << this->Map_list[i].Ship_list[j].id       << ", ";
+			this->save_file << "size: " << this->Map_list[i].Ship_list[j].size     << ", ";
+			this->save_file << "pos: "  << this->Map_list[i].Ship_list[j].position << endl;
+		}
+	}
+	
+	this->save_file << "-";//end of a map in the file
+	this->save_file.close();
 }

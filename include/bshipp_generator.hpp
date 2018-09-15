@@ -14,12 +14,14 @@ using namespace std;
 struct Coords{
 	int x;
 	int y;
-	Coords(unsigned int x, unsigned int y);
+	Coords(unsigned int x = 999, unsigned int y = 999);
 };
+ostream& operator<<( std::ostream& os, const Coords & coordenada );
 
 struct Boat{
 	char id;
 	unsigned int size;
+	Coords position;
 	Boat(char id, unsigned int size);
 };
 
@@ -39,9 +41,6 @@ struct Battle_map{
 	Battle_map(unsigned long const width, unsigned long const height);
 	~Battle_map();
 };
-
-
-
 ostream& operator<<( std::ostream& os, const Battle_map & mapa );
 
 
@@ -49,10 +48,11 @@ ostream& operator<<( std::ostream& os, const Battle_map & mapa );
 class Map_generator{
 public:
 	vector<Battle_map> Map_list;
-	
+	ofstream          save_file;
 
 	void   new_map(unsigned long const width, unsigned long const height);
 	void view_last(void);
+	void  save_all(void);
 };
 
 

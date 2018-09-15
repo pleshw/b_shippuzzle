@@ -19,13 +19,13 @@ int main(){
 
 	srand (time(NULL));
 	
-	int  _random   = rand() % generator.Map_list.back().Free_spots.size();
-	int  _posX     = generator.Map_list.back().Free_spots[_random].x;
-	int  _posY     = generator.Map_list.back().Free_spots[_random].y;
-	int  _dir_seed = rand() % 1;
-	char _dir;
+	int  _random   = rand() % generator.Map_list.back().Free_spots.size();//random number in free spot vector
+	int  _posX     = generator.Map_list.back().Free_spots[_random].x;//x of the free spot selected position
+	int  _posY     = generator.Map_list.back().Free_spots[_random].y;//y of the free spot selected position
+	int  _dir_seed = rand() % 1;//flip a coin to get direction
+	char _dir;//direction
 	if(_dir_seed == 0) _dir = 'h';
-	if(_dir_seed == 1) _dir = 'v';
+	if(_dir_seed == 1) _dir = 'v';	
 
 	for(unsigned int i(0); i < 1; i++){
 		while(!generator.Map_list.back().free_position(_posX, _posY, Battle_ship.size, _dir)){
@@ -80,18 +80,9 @@ int main(){
 		generator.Map_list.back().place_a_ship(_posX, _posY, Destroyer, _dir);
 	}
 
-	ofstream arquivo("mapas.txt");
-
-	for (unsigned int i(0); i < generator.Map_list.back().height; i++){
-		for (unsigned int j(0); j < generator.Map_list.back().width; j++){
-			arquivo << generator.Map_list.back().grid[i][j];
-		}
-		arquivo << endl;
-	}
-
-	arquivo.close();
-
 	generator.view_last();
+
+	generator.save_all();
 
 	return 0;
 }
