@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "include/bshipp_generator.hpp"
+#include <fstream>
 
 using namespace std;
 
@@ -17,6 +18,7 @@ int main(){
 	generator.new_map(15, 15);
 
 	srand (time(NULL));
+	
 	int  _random   = rand() % generator.Map_list.back().Free_spots.size();
 	int  _posX     = generator.Map_list.back().Free_spots[_random].x;
 	int  _posY     = generator.Map_list.back().Free_spots[_random].y;
@@ -78,7 +80,16 @@ int main(){
 		generator.Map_list.back().place_a_ship(_posX, _posY, Destroyer, _dir);
 	}
 
-	
+	ofstream arquivo("mapas.txt");
+
+	for (unsigned int i(0); i < generator.Map_list.back().height; i++){
+		for (unsigned int j(0); j < generator.Map_list.back().width; j++){
+			arquivo << generator.Map_list.back().grid[i][j];
+		}
+		arquivo << endl;
+	}
+
+	arquivo.close();
 
 	generator.view_last();
 

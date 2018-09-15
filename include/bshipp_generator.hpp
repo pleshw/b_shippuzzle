@@ -30,6 +30,7 @@ struct Battle_map{
 	unsigned long        width;
 	char                **grid; ///w for water //. for border //id for boat
 	vector<Coords>  Free_spots;
+	vector<Boat>     Ship_list;
 
 	void place_a_ship  (unsigned int x, unsigned int y,     Boat & vessel, char direction);///place a ship of the selected size in the selected direction if its possible
 	bool in_map_range  (unsigned int x, unsigned int y, unsigned int size, char direction);///Return true if you can place a ship of selected size in the selected direction at the position

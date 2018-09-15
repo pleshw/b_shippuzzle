@@ -16,12 +16,6 @@ ostream& operator<< ( std::ostream& os, const Battle_map & mapa ){
 	return os;
 }
 
-
-
-
-
-
-
 /////--------------------------------------------------------------------------------------------------------
 // CONSTRUCTORS AND DESTRUCTORS
 Coords::Coords(unsigned int x, unsigned int y){
@@ -33,7 +27,6 @@ Boat::Boat(char id, unsigned int size){
 	this->id   = id;
 	this->size = size;
 }
-
 
 Battle_map::Battle_map(unsigned long width, unsigned long height){
 	//get the dimensions
@@ -58,39 +51,8 @@ Battle_map::~Battle_map(){
 	delete [] this->grid;
 }
 
-
-
-
-
-
 //BATTLE MAP
 void Battle_map::place_a_ship(unsigned int x, unsigned int y, Boat & vessel, char direction){
-	// cout << endl << endl << "----------------------------" << endl
-	// 	 << ">>place_a_ship log." << endl;
-
-	// cout << "--Input details-- " << endl;
-	// cout << "X: " << x << endl;
-	// cout << "Y: " << y << endl;
-	// cout << "Boat Size: " << vessel.size << endl;
-	// cout << "Direction: " << direction << endl << endl;
-
-	// cout << "--Map details-- " << endl;
-	// cout << "With: "   << this->width  << endl;
-	// cout << "Height: " << this->height << endl << endl;
-
-
-	// cout << "--More details-- " << endl;
-	// if (direction == 'h'){
-	// 	cout << "From: " <<  x              << " " << y << endl;
-	// 	cout << "To: "   << (x+vessel.size) << " " << y << endl << endl;
-	// }
-
-	// if (direction == 'v'){
-	// 	cout << "From: " << x << " " <<  y              << endl;
-	// 	cout << "To: "   << x << " " << (y+vessel.size) << endl << endl;
-	// }
-
-
 	if (this->in_map_range(x, y, vessel.size, direction)){
 		bool border_left   = false;
 		bool border_top    = false;
@@ -121,8 +83,7 @@ void Battle_map::place_a_ship(unsigned int x, unsigned int y, Boat & vessel, cha
 					if(border_top)    {this->grid[y-1][x+n] = '.';}
 					this->grid[y][x+n] = vessel.id;
 				}
-				// cout << endl << "SHIP PLACED IN POSITION >> " << x << " " << y << endl
-				// 	 << "WITH DIRECTION '" << direction << "' AND SIZE " << vessel.size;
+
 
 			//update free spots array	
 			//update free spots array	
@@ -133,11 +94,9 @@ void Battle_map::place_a_ship(unsigned int x, unsigned int y, Boat & vessel, cha
 						}
 					}
 				}
-				// cout << endl << "FREE SPOTS ARRAY UPDATED" << x << " " << y << endl << endl;
 			break;
 	
 			case 'v':
-
 			//all border cases
 				if (this->in_map_range(x-1 ,             y , 1 , 'v')) {border_left   = true;}
 				if (this->in_map_range( x  ,           y-1 , 1 , 'v')) {border_top    = true;}
@@ -158,8 +117,6 @@ void Battle_map::place_a_ship(unsigned int x, unsigned int y, Boat & vessel, cha
 					if(border_left)  {this->grid[y+n][x-1] = '.';}
 					this->grid[y+n][x] = vessel.id;
 				}
-				// cout << endl << "SHIP PLACED IN POSITION >> " << x << " " << y << endl
-				// 	 << "WITH DIRECTION " << direction << " AND SIZE " << vessel.size;
 
 			//update free spots array	
 				for(unsigned int i(0); i < height; i++){
@@ -169,45 +126,13 @@ void Battle_map::place_a_ship(unsigned int x, unsigned int y, Boat & vessel, cha
 						}
 					}
 				}
-				// cout << endl << "FREE SPOTS ARRAY UPDATED" << x << " " << y << endl << endl;
 			break;
 		}
 	}
-
-	
-
 }
 
 //verify if this position and this size still in the map range
 bool Battle_map::in_map_range(unsigned int x, unsigned int y, unsigned int size, char direction){
-
-	// cout << endl << endl << "----------------------------" << endl
-	// 	 << ">>in_map_range log." << endl;
-
-	// cout << "--Input details-- " << endl;
-	// cout << "X: " << x << endl;
-	// cout << "Y: " << y << endl;
-	// cout << "Size: " << size << endl;
-	// cout << "Direction: " << direction << endl << endl;
-
-	// cout << "--Map details-- " << endl;
-	// cout << "With: " << this->width << endl;
-	// cout << "Height: " << this->height << endl << endl;
-
-
-	// cout << " --More details-- " << endl;
-	// if (direction == 'h'){
-	// 	cout << "From: " <<  x       << " " << y << endl;
-	// 	cout << "To: "   << (x+size) << " " << y << endl << endl;
-	// }
-
-	// if (direction == 'v'){
-	// 	cout << "From: " << x << " " <<  y << endl;
-	// 	cout << "To: "   << x << " " << (y+size) << endl << endl;
-	// }
-
-
-
 	if (x >= this->width)  { return false; }
 	if (y >= this->height) { return false; }
 	if (x < 0)             { return false; }
@@ -215,13 +140,11 @@ bool Battle_map::in_map_range(unsigned int x, unsigned int y, unsigned int size,
 
 	if (direction == 'h'){
 		if(((x+size) <= this->width)){
-			// cout << endl << "Draw this" << endl;
 			return true;
 		}
 	}
 	if (direction == 'v'){
 		if(((y+size) <= this->height)){
-			// cout << endl << "Draw this" << endl;
 			return true;
 		}
 	}
@@ -230,36 +153,6 @@ bool Battle_map::in_map_range(unsigned int x, unsigned int y, unsigned int size,
 
 //verify if the selected coord is a valid spot to place a boat with this size
 bool Battle_map::free_position(unsigned int x, unsigned int y, unsigned int size, char direction){
-	// cout << endl << endl << "----------------------------" << endl
-	// 	 << ">>free_position log." << endl;
-
-	// cout << "--Input details-- " << endl;
-	// cout << "X: " << x << endl;
-	// cout << "Y: " << y << endl;
-	// cout << "Size: " << size << endl;
-	// cout << "Direction: " << direction << endl << endl;
-
-	// cout << "--Map details-- " << endl;
-	// cout << "With: " << this->width << endl;
-	// cout << "Height: " << this->height << endl << endl;
-
-
-	// cout << " --More details-- " << endl;
-	// if (direction == 'h'){
-	// 	cout << "From: " <<  x       << " " << y << endl;
-	// 	cout << "To: "   << (x+size) << " " << y << endl << endl;
-	// }
-
-	// if (direction == 'v'){
-	// 	cout << "From: " << x << " " <<  y << endl;
-	// 	cout << "To: "   << x << " " << (y+size) << endl << endl;
-	// }
-
-	// cout << "In this position: " << this->grid[y][x] << endl << endl;
-
-
-
-
 	if (this->grid[y][x] != '~')                    return false;
 	if (!this->in_map_range(x, y, size, direction))	return false;
 	
@@ -291,13 +184,8 @@ bool Battle_map::free_position(unsigned int x, unsigned int y, unsigned int size
 }
 
 
-
-
-
 /////MAP GENERATOR
-
 void Map_generator::new_map(unsigned long width, unsigned long height){
-
 	Map_list.emplace_back(width, height);
 
 	for(unsigned int i(0); i < height; i++){
@@ -307,17 +195,8 @@ void Map_generator::new_map(unsigned long width, unsigned long height){
 			}
 		}
 	}
-
-	// cout << endl << endl << "MAP CREATED WITH SUCESS" << endl << endl;
 }
 
 void Map_generator::view_last(void){
-	// cout << endl << endl << "----------------------------" << endl
-	// 	 << ">>view_last log." << endl;
-
-	// cout << endl << "Last Map info" << endl;
-	// cout << "Width: "  << this->Map_list.back().width << endl;
-	// cout << "Height: " << this->Map_list.back().width << endl;
-
 	cout << this->Map_list.back();
 }
