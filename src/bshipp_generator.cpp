@@ -38,23 +38,27 @@ Battle_map::Battle_map(unsigned long width, unsigned long height){
 	this->width  = width;
 	this->height = height;
 
+	this->grid.resize(height);
+	for(unsigned int i(0); i < height; i++){
+		this->grid[i].resize(width);
+	}
+	
 	//allocate grid
-	this->grid = new char*[height];
-	for(unsigned long i(0); i < height; i++){
-		this->grid[i] = new char(width);
-		//filling with water
-		for(unsigned long j(0); j < width; j++){
+	for(unsigned int i(0); i < height; i++){
+		for(unsigned int j(0); j < width; j++){
 			this->grid[i][j] = '~';
 		}
 	}
-}
-//delete the memory allocated for the map
-Battle_map::~Battle_map(){
-	for(unsigned long i(0); i < this->height; i++){
-		delete [] this->grid[i];
+
+	for(unsigned int i(0); i < height; i++){
+		for(unsigned int j(0); j < width; j++){
+			if(this->free_position(j, i, 1, 'h')){
+				this->Free_spots.emplace_back(i, j);
+			}
+		}
 	}
-	delete [] this->grid;
 }
+
 
 //BATTLE MAP
 void Battle_map::place_a_ship(unsigned int x, unsigned int y, Boat & vessel, char direction){
@@ -199,31 +203,30 @@ bool Battle_map::free_position(unsigned int x, unsigned int y, unsigned int size
 void Map_generator::new_map(unsigned long width, unsigned long height){
 	Map_list.emplace_back(width, height);
 
-	for(unsigned int i(0); i < height; i++){
-		for(unsigned int j(0); j < width; j++){
-			if(this->Map_list.back().free_position(j, i, 1, 'h')){
-				this->Map_list.back().Free_spots.emplace_back(i, j);
-			}
-		}
-	}
 }
 
 void Map_generator::view_last(void){
 	cout << endl << endl << this->Map_list.back() << endl;
 }
 
+void Map_generator::view_all(void){
+	for(unsigned int i(0); i < this->Map_list.size(); i++){
+		cout << endl << i;
+		cout << endl << this->Map_list[i];
+	}
+}
+
 void Map_generator::save_all(void){
 	this->save_file.open("mapas.txt");
-
+	this->save_file << this->Map_list.size() << " //number of maps";
 	for(unsigned int i(0); i < this->Map_list.size(); i++){
-		this->save_file << "mapa: " << this->Map_list.back().width << " " << this->Map_list.back().height << endl;	
+		this->save_file << endl << "mapa: " << this->Map_list.back().width << " " << this->Map_list.back().height << endl;	
 		for(unsigned int j(0); j < this->Map_list[i].Ship_list.size(); j++){
 			this->save_file << "id: "   << this->Map_list[i].Ship_list[j].id       << ", ";
 			this->save_file << "size: " << this->Map_list[i].Ship_list[j].size     << ", ";
 			this->save_file << "pos: "  << this->Map_list[i].Ship_list[j].position << endl;
 		}
+		this->save_file << "-";//end of a map in the file
 	}
-	
-	this->save_file << "-";//end of a map in the file
 	this->save_file.close();
 }

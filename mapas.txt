@@ -1,12 +1,24 @@
+2 //number of maps
 mapa: 15 15
-id: S, size: 4, pos: 3 1
-id: s, size: 1, pos: 3 9
-id: s, size: 1, pos: 9 12
+id: S, size: 4, pos: 1 1
+id: s, size: 1, pos: 8 1
+id: s, size: 1, pos: 3 4
 id: s, size: 1, pos: 12 6
-id: s, size: 1, pos: 4 13
-id: C, size: 3, pos: 6 9
-id: C, size: 3, pos: 4 4
-id: C, size: 3, pos: 6 6
-id: D, size: 2, pos: 11 0
-id: D, size: 2, pos: 6 14
+id: s, size: 1, pos: 1 10
+id: C, size: 3, pos: 6 4
+id: C, size: 3, pos: 8 11
+id: C, size: 3, pos: 12 14
+id: D, size: 2, pos: 8 8
+id: D, size: 2, pos: 4 12
+-
+mapa: 15 15
+id: s, size: 1, pos: 4 12
+id: s, size: 1, pos: 12 2
+id: s, size: 1, pos: 10 0
+id: s, size: 1, pos: 2 2
+id: C, size: 3, pos: 4 5
+id: C, size: 3, pos: 8 14
+id: C, size: 3, pos: 2 0
+id: D, size: 2, pos: 1 8
+id: D, size: 2, pos: 5 2
 -
