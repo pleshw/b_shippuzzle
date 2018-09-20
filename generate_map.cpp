@@ -1,140 +1,46 @@
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
+#include <string>
 #include "include/bshipp_generator.hpp"
 #include <fstream>
 
 using namespace std;
 
-int main(){
+
+void place_random(Battle_map & Map, Boat & ship, unsigned int amount);
+
+int main(int argc, char const *argv[]){
 	
+	unsigned int map_size = 15;
+
+	if(argc > 2) map_size = atoi(argv[2]);
+
+	if (argc < 1){
+		cout << endl << endl << "Please set the number of maps as first arg.";
+		exit(-1);
+	}
+
 	//criando barcos que vão ser usados	
 	Boat Battle_ship('S', 4), Cruiser('C', 3), Destroyer('D', 2), Submarine('s', 1);
 
-	//criando objeto da classe geradora de mapas
+	//creating a new map generator
 	Map_generator generator;
 
-	//criando um novo mapa
-	generator.new_map(15, 15);
+	//positioning the squad at random places
+	for(int i(0); i < atoi(argv[1]); i++){
+		//create a new map
+		generator.new_map(map_size, map_size);
+		
+		//set a new seed
+		srand (time(NULL)+i);
 
-	srand (time(NULL));
-	
-	int  _random   = rand() % generator.Map_list.back().Free_spots.size();//random number in free spot vector
-	int  _posX     = generator.Map_list.back().Free_spots[_random].x;//x of the free spot selected position
-	int  _posY     = generator.Map_list.back().Free_spots[_random].y;//y of the free spot selected position
-	int  _dir_seed = rand() % 1;//flip a coin to get direction
-	char _dir;//direction
-	if(_dir_seed == 0) _dir = 'h';
-	if(_dir_seed == 1) _dir = 'v';	
-
-	for(unsigned int i(0); i < 1; i++){
-		while(!generator.Map_list.back().free_position(_posX, _posY, Battle_ship.size, _dir)){
-			_random   = rand() % generator.Map_list.back().Free_spots.size();
-			_posX     = generator.Map_list.back().Free_spots[_random].x;
-			_posY     = generator.Map_list.back().Free_spots[_random].y;
-			_dir_seed = rand() % 1;
-			if(_dir_seed == 0) _dir = 'h';
-			if(_dir_seed == 1) _dir = 'v';	
-		}
-
-		generator.Map_list.back().place_a_ship(_posY, _posY, Battle_ship, _dir);
+		//place the ship in a random spot
+		place_random(generator.Map_list[i], Battle_ship, 1);
+		place_random(generator.Map_list[i],     Cruiser, 2);
+		place_random(generator.Map_list[i],   Destroyer, 3);
+		place_random(generator.Map_list[i],   Submarine, 4);
 	}
-
-	for(unsigned int i(0); i < 4; i++){
-		while(!generator.Map_list.back().free_position(_posX, _posY, Submarine.size, _dir)){
-			_random   = rand() % generator.Map_list.back().Free_spots.size();
-			_posX     = generator.Map_list.back().Free_spots[_random].x;
-			_posY     = generator.Map_list.back().Free_spots[_random].y;
-			_dir_seed = rand() % 1;
-			if(_dir_seed == 0) _dir = 'h';
-			if(_dir_seed == 1) _dir = 'v';	
-		}
-
-		generator.Map_list.back().place_a_ship(_posX, _posY, Submarine, _dir);
-	}
-
-
-	for(unsigned int i(0); i < 3; i++){
-		while(!generator.Map_list.back().free_position(_posX, _posY, Cruiser.size, _dir)){
-			_random   = rand() % generator.Map_list.back().Free_spots.size();
-			_posX     = generator.Map_list.back().Free_spots[_random].x;
-			_posY     = generator.Map_list.back().Free_spots[_random].y;
-			_dir_seed = rand() % 1;
-			if(_dir_seed == 0) _dir = 'h';
-			if(_dir_seed == 1) _dir = 'v';	
-		}
-
-		generator.Map_list.back().place_a_ship(_posX, _posY, Cruiser, _dir);
-	}
-
-	for(unsigned int i(0); i < 2; i++){
-		while(!generator.Map_list.back().free_position(_posX, _posY, Destroyer.size, _dir)){
-			_random   = rand() % generator.Map_list.back().Free_spots.size();
-			_posX     = generator.Map_list.back().Free_spots[_random].x;
-			_posY     = generator.Map_list.back().Free_spots[_random].y;
-			_dir_seed = rand() % 1;
-			if(_dir_seed == 0) _dir = 'h';
-			if(_dir_seed == 1) _dir = 'v';	
-		}
-
-		generator.Map_list.back().place_a_ship(_posX, _posY, Destroyer, _dir);
-	}
-
-	generator.new_map(15, 15);
-
-	for(unsigned int i(0); i < 1; i++){
-		while(!generator.Map_list.back().free_position(_posX, _posY, Battle_ship.size, _dir)){
-			_random   = rand() % generator.Map_list.back().Free_spots.size();
-			_posX     = generator.Map_list.back().Free_spots[_random].x;
-			_posY     = generator.Map_list.back().Free_spots[_random].y;
-			_dir_seed = rand() % 1;
-			if(_dir_seed == 0) _dir = 'h';
-			if(_dir_seed == 1) _dir = 'v';	
-		}
-
-		generator.Map_list.back().place_a_ship(_posY, _posY, Battle_ship, _dir);
-	}
-
-	for(unsigned int i(0); i < 4; i++){
-		while(!generator.Map_list.back().free_position(_posX, _posY, Submarine.size, _dir)){
-			_random   = rand() % generator.Map_list.back().Free_spots.size();
-			_posX     = generator.Map_list.back().Free_spots[_random].x;
-			_posY     = generator.Map_list.back().Free_spots[_random].y;
-			_dir_seed = rand() % 1;
-			if(_dir_seed == 0) _dir = 'h';
-			if(_dir_seed == 1) _dir = 'v';	
-		}
-
-		generator.Map_list.back().place_a_ship(_posX, _posY, Submarine, _dir);
-	}
-
-
-	for(unsigned int i(0); i < 3; i++){
-		while(!generator.Map_list.back().free_position(_posX, _posY, Cruiser.size, _dir)){
-			_random   = rand() % generator.Map_list.back().Free_spots.size();
-			_posX     = generator.Map_list.back().Free_spots[_random].x;
-			_posY     = generator.Map_list.back().Free_spots[_random].y;
-			_dir_seed = rand() % 1;
-			if(_dir_seed == 0) _dir = 'h';
-			if(_dir_seed == 1) _dir = 'v';	
-		}
-
-		generator.Map_list.back().place_a_ship(_posX, _posY, Cruiser, _dir);
-	}
-
-	for(unsigned int i(0); i < 2; i++){
-		while(!generator.Map_list.back().free_position(_posX, _posY, Destroyer.size, _dir)){
-			_random   = rand() % generator.Map_list.back().Free_spots.size();
-			_posX     = generator.Map_list.back().Free_spots[_random].x;
-			_posY     = generator.Map_list.back().Free_spots[_random].y;
-			_dir_seed = rand() % 1;
-			if(_dir_seed == 0) _dir = 'h';
-			if(_dir_seed == 1) _dir = 'v';	
-		}
-
-		generator.Map_list.back().place_a_ship(_posX, _posY, Destroyer, _dir);
-	}
-
 
 	generator.view_all();
 
@@ -146,3 +52,25 @@ int main(){
 
 
 
+void place_random(Battle_map & Map, Boat & ship, unsigned int amount){
+	int  _random   = rand() % Map.Free_spots.size();//random number in free spot vector
+	int  _posX     = Map.Free_spots[_random].x;//x of the free spot selected position
+	int  _posY     = Map.Free_spots[_random].y;//y of the free spot selected position
+	int  _dir_seed = rand() % 1;//flip a coin to get direction
+	char _dir;//direction
+	if(_dir_seed == 0) _dir = 'h';
+	if(_dir_seed == 1) _dir = 'v';	
+
+	for(unsigned int j(0); j < amount; j++){
+		while(!Map.free_position(_posX, _posY, ship.size, _dir)){
+			_random   = rand() % Map.Free_spots.size();
+			_posX     = Map.Free_spots[_random].x;
+			_posY     = Map.Free_spots[_random].y;
+			_dir_seed = rand() % 1;
+			if(_dir_seed == 0) _dir = 'h';
+			if(_dir_seed == 1) _dir = 'v';	
+		}
+
+		Map.place_a_ship(_posX, _posY, ship, _dir);
+	}
+}

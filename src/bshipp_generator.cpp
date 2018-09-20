@@ -202,7 +202,6 @@ bool Battle_map::free_position(unsigned int x, unsigned int y, unsigned int size
 /////MAP GENERATOR
 void Map_generator::new_map(unsigned long width, unsigned long height){
 	Map_list.emplace_back(width, height);
-
 }
 
 void Map_generator::view_last(void){
@@ -211,7 +210,7 @@ void Map_generator::view_last(void){
 
 void Map_generator::view_all(void){
 	for(unsigned int i(0); i < this->Map_list.size(); i++){
-		cout << endl << i;
+		cout << endl << i+1;
 		cout << endl << this->Map_list[i];
 	}
 }
