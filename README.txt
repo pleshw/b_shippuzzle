@@ -1,5 +1,5 @@
 --This is a project for one of ITs grades in UFRN
 
---Generate maps interface: g++ generate_map.cpp src/bshipp_generator.cpp -o generator -Wall -pedantic -std=c++11
+--Build generator and bins: make build
 
--- ./generator [num_of_maps] optional[map_size]
+--Exec gen random map: ./gen_rand [num_of_maps] optional[map_size]
