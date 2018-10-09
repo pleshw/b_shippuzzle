@@ -1,61 +1,37 @@
-5 //number of maps
+3 //number of maps
 mapa: 15 15
-id: S, size: 4, pos: 0 0
-id: C, size: 3, pos: 8 11
-id: C, size: 3, pos: 3 2
-id: D, size: 2, pos: 5 11
-id: D, size: 2, pos: 7 0
-id: D, size: 2, pos: 12 12
-id: s, size: 1, pos: 0 10
-id: s, size: 1, pos: 14 1
-id: s, size: 1, pos: 10 13
-id: s, size: 1, pos: 8 7
+id: S, size: 4, pos: 5 3
+id: C, size: 3, pos: 0 0
+id: C, size: 3, pos: 6 7
+id: D, size: 2, pos: 11 5
+id: D, size: 2, pos: 9 13
+id: D, size: 2, pos: 13 7
+id: s, size: 1, pos: 0 9
+id: s, size: 1, pos: 11 2
+id: s, size: 1, pos: 3 10
+id: s, size: 1, pos: 8 10
 -
 mapa: 15 15
-id: S, size: 4, pos: 5 7
-id: C, size: 3, pos: 6 0
-id: C, size: 3, pos: 3 9
-id: D, size: 2, pos: 10 11
-id: D, size: 2, pos: 6 13
-id: D, size: 2, pos: 2 6
-id: s, size: 1, pos: 13 13
-id: s, size: 1, pos: 10 7
-id: s, size: 1, pos: 14 3
-id: s, size: 1, pos: 9 13
+id: S, size: 4, pos: 1 12
+id: C, size: 3, pos: 11 9
+id: C, size: 3, pos: 0 10
+id: D, size: 2, pos: 10 1
+id: D, size: 2, pos: 11 12
+id: D, size: 2, pos: 2 8
+id: s, size: 1, pos: 7 5
+id: s, size: 1, pos: 1 5
+id: s, size: 1, pos: 6 1
+id: s, size: 1, pos: 2 3
 -
 mapa: 15 15
-id: S, size: 4, pos: 10 9
-id: C, size: 3, pos: 6 4
-id: C, size: 3, pos: 11 14
-id: D, size: 2, pos: 6 12
-id: D, size: 2, pos: 7 8
-id: D, size: 2, pos: 10 4
-id: s, size: 1, pos: 10 0
-id: s, size: 1, pos: 1 10
-id: s, size: 1, pos: 3 4
-id: s, size: 1, pos: 0 13
--
-mapa: 15 15
-id: S, size: 4, pos: 2 2
-id: C, size: 3, pos: 1 10
-id: C, size: 3, pos: 12 9
-id: D, size: 2, pos: 13 0
-id: D, size: 2, pos: 13 11
-id: D, size: 2, pos: 7 7
-id: s, size: 1, pos: 0 8
-id: s, size: 1, pos: 13 14
-id: s, size: 1, pos: 12 3
-id: s, size: 1, pos: 8 4
--
-mapa: 15 15
-id: S, size: 4, pos: 0 5
-id: C, size: 3, pos: 10 13
-id: C, size: 3, pos: 0 1
-id: D, size: 2, pos: 3 7
-id: D, size: 2, pos: 4 14
-id: D, size: 2, pos: 9 10
-id: s, size: 1, pos: 8 4
-id: s, size: 1, pos: 13 1
-id: s, size: 1, pos: 2 13
-id: s, size: 1, pos: 7 11
+id: S, size: 4, pos: 1 2
+id: C, size: 3, pos: 9 11
+id: C, size: 3, pos: 8 5
+id: D, size: 2, pos: 10 14
+id: D, size: 2, pos: 0 9
+id: D, size: 2, pos: 2 7
+id: s, size: 1, pos: 5 13
+id: s, size: 1, pos: 7 9
+id: s, size: 1, pos: 14 6
+id: s, size: 1, pos: 7 12
 -
