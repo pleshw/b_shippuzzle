@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string>
-#include "include/bshipp_generator.hpp"
+#include "../include/bshipp_generator.hpp"
 #include <fstream>
 
 using namespace std;
