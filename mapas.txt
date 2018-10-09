@@ -1,37 +1,1201 @@
-3 //number of maps
+100 //number of maps
 mapa: 15 15
-id: S, size: 4, pos: 5 3
-id: C, size: 3, pos: 0 0
-id: C, size: 3, pos: 6 7
-id: D, size: 2, pos: 11 5
-id: D, size: 2, pos: 9 13
-id: D, size: 2, pos: 13 7
-id: s, size: 1, pos: 0 9
-id: s, size: 1, pos: 11 2
-id: s, size: 1, pos: 3 10
-id: s, size: 1, pos: 8 10
+id: S, size: 4, pos: 10 12
+id: C, size: 3, pos: 6 9
+id: C, size: 3, pos: 2 13
+id: D, size: 2, pos: 9 4
+id: D, size: 2, pos: 7 12
+id: D, size: 2, pos: 5 4
+id: s, size: 1, pos: 10 9
+id: s, size: 1, pos: 12 7
+id: s, size: 1, pos: 5 2
+id: s, size: 1, pos: 10 7
 -
 mapa: 15 15
-id: S, size: 4, pos: 1 12
-id: C, size: 3, pos: 11 9
-id: C, size: 3, pos: 0 10
-id: D, size: 2, pos: 10 1
-id: D, size: 2, pos: 11 12
-id: D, size: 2, pos: 2 8
-id: s, size: 1, pos: 7 5
-id: s, size: 1, pos: 1 5
+id: S, size: 4, pos: 6 0
+id: C, size: 3, pos: 0 5
+id: C, size: 3, pos: 3 10
+id: D, size: 2, pos: 7 10
+id: D, size: 2, pos: 12 14
+id: D, size: 2, pos: 8 5
+id: s, size: 1, pos: 12 11
+id: s, size: 1, pos: 12 1
+id: s, size: 1, pos: 12 3
+id: s, size: 1, pos: 1 12
+-
+mapa: 15 15
+id: S, size: 4, pos: 10 3
+id: C, size: 3, pos: 3 10
+id: C, size: 3, pos: 9 14
+id: D, size: 2, pos: 6 4
+id: D, size: 2, pos: 7 7
+id: D, size: 2, pos: 11 8
+id: s, size: 1, pos: 0 5
 id: s, size: 1, pos: 6 1
-id: s, size: 1, pos: 2 3
+id: s, size: 1, pos: 3 7
+id: s, size: 1, pos: 14 1
 -
 mapa: 15 15
-id: S, size: 4, pos: 1 2
-id: C, size: 3, pos: 9 11
-id: C, size: 3, pos: 8 5
-id: D, size: 2, pos: 10 14
-id: D, size: 2, pos: 0 9
+id: S, size: 4, pos: 10 13
+id: C, size: 3, pos: 4 8
+id: C, size: 3, pos: 7 2
+id: D, size: 2, pos: 2 13
+id: D, size: 2, pos: 13 3
+id: D, size: 2, pos: 10 7
+id: s, size: 1, pos: 8 9
+id: s, size: 1, pos: 13 6
+id: s, size: 1, pos: 1 3
+id: s, size: 1, pos: 7 14
+-
+mapa: 15 15
+id: S, size: 4, pos: 6 12
+id: C, size: 3, pos: 9 2
+id: C, size: 3, pos: 2 0
+id: D, size: 2, pos: 5 14
 id: D, size: 2, pos: 2 7
-id: s, size: 1, pos: 5 13
-id: s, size: 1, pos: 7 9
-id: s, size: 1, pos: 14 6
+id: D, size: 2, pos: 6 6
+id: s, size: 1, pos: 9 7
+id: s, size: 1, pos: 0 14
+id: s, size: 1, pos: 2 3
+id: s, size: 1, pos: 13 11
+-
+mapa: 15 15
+id: S, size: 4, pos: 3 8
+id: C, size: 3, pos: 0 1
+id: C, size: 3, pos: 9 0
+id: D, size: 2, pos: 12 11
+id: D, size: 2, pos: 13 0
+id: D, size: 2, pos: 3 13
+id: s, size: 1, pos: 6 12
+id: s, size: 1, pos: 5 2
+id: s, size: 1, pos: 10 5
+id: s, size: 1, pos: 8 13
+-
+mapa: 15 15
+id: S, size: 4, pos: 2 13
+id: C, size: 3, pos: 3 2
+id: C, size: 3, pos: 6 0
+id: D, size: 2, pos: 0 11
+id: D, size: 2, pos: 2 4
+id: D, size: 2, pos: 10 4
 id: s, size: 1, pos: 7 12
+id: s, size: 1, pos: 5 11
+id: s, size: 1, pos: 0 13
+id: s, size: 1, pos: 10 14
+-
+mapa: 15 15
+id: S, size: 4, pos: 11 3
+id: C, size: 3, pos: 6 13
+id: C, size: 3, pos: 0 11
+id: D, size: 2, pos: 6 5
+id: D, size: 2, pos: 12 6
+id: D, size: 2, pos: 1 7
+id: s, size: 1, pos: 6 10
+id: s, size: 1, pos: 0 2
+id: s, size: 1, pos: 0 5
+id: s, size: 1, pos: 2 2
+-
+mapa: 15 15
+id: S, size: 4, pos: 6 10
+id: C, size: 3, pos: 1 0
+id: C, size: 3, pos: 5 3
+id: D, size: 2, pos: 9 6
+id: D, size: 2, pos: 3 5
+id: D, size: 2, pos: 0 11
+id: s, size: 1, pos: 14 10
+id: s, size: 1, pos: 0 14
+id: s, size: 1, pos: 2 9
+id: s, size: 1, pos: 12 11
+-
+mapa: 15 15
+id: S, size: 4, pos: 9 10
+id: C, size: 3, pos: 9 1
+id: C, size: 3, pos: 4 6
+id: D, size: 2, pos: 12 13
+id: D, size: 2, pos: 12 6
+id: D, size: 2, pos: 3 12
+id: s, size: 1, pos: 5 9
+id: s, size: 1, pos: 12 4
+id: s, size: 1, pos: 7 2
+id: s, size: 1, pos: 1 0
+-
+mapa: 15 15
+id: S, size: 4, pos: 6 8
+id: C, size: 3, pos: 3 6
+id: C, size: 3, pos: 12 7
+id: D, size: 2, pos: 2 14
+id: D, size: 2, pos: 4 12
+id: D, size: 2, pos: 5 14
+id: s, size: 1, pos: 3 1
+id: s, size: 1, pos: 4 9
+id: s, size: 1, pos: 12 13
+id: s, size: 1, pos: 12 10
+-
+mapa: 15 15
+id: S, size: 4, pos: 2 10
+id: C, size: 3, pos: 2 13
+id: C, size: 3, pos: 11 11
+id: D, size: 2, pos: 4 6
+id: D, size: 2, pos: 0 4
+id: D, size: 2, pos: 7 5
+id: s, size: 1, pos: 5 0
+id: s, size: 1, pos: 9 13
+id: s, size: 1, pos: 10 2
+id: s, size: 1, pos: 4 8
+-
+mapa: 15 15
+id: S, size: 4, pos: 0 2
+id: C, size: 3, pos: 6 13
+id: C, size: 3, pos: 11 7
+id: D, size: 2, pos: 0 10
+id: D, size: 2, pos: 13 12
+id: D, size: 2, pos: 3 9
+id: s, size: 1, pos: 14 2
+id: s, size: 1, pos: 12 1
+id: s, size: 1, pos: 6 4
+id: s, size: 1, pos: 4 0
+-
+mapa: 15 15
+id: S, size: 4, pos: 2 4
+id: C, size: 3, pos: 2 13
+id: C, size: 3, pos: 11 11
+id: D, size: 2, pos: 7 6
+id: D, size: 2, pos: 5 11
+id: D, size: 2, pos: 3 1
+id: s, size: 1, pos: 8 0
+id: s, size: 1, pos: 3 10
+id: s, size: 1, pos: 12 7
+id: s, size: 1, pos: 0 11
+-
+mapa: 15 15
+id: S, size: 4, pos: 4 6
+id: C, size: 3, pos: 6 1
+id: C, size: 3, pos: 0 12
+id: D, size: 2, pos: 9 5
+id: D, size: 2, pos: 0 10
+id: D, size: 2, pos: 3 8
+id: s, size: 1, pos: 13 13
+id: s, size: 1, pos: 14 2
+id: s, size: 1, pos: 13 5
+id: s, size: 1, pos: 11 7
+-
+mapa: 15 15
+id: S, size: 4, pos: 7 3
+id: C, size: 3, pos: 11 12
+id: C, size: 3, pos: 12 9
+id: D, size: 2, pos: 9 10
+id: D, size: 2, pos: 0 9
+id: D, size: 2, pos: 13 7
+id: s, size: 1, pos: 5 8
+id: s, size: 1, pos: 5 3
+id: s, size: 1, pos: 12 5
+id: s, size: 1, pos: 8 8
+-
+mapa: 15 15
+id: S, size: 4, pos: 7 4
+id: C, size: 3, pos: 0 8
+id: C, size: 3, pos: 7 14
+id: D, size: 2, pos: 2 5
+id: D, size: 2, pos: 3 0
+id: D, size: 2, pos: 11 9
+id: s, size: 1, pos: 4 14
+id: s, size: 1, pos: 0 0
+id: s, size: 1, pos: 1 12
+id: s, size: 1, pos: 8 12
+-
+mapa: 15 15
+id: S, size: 4, pos: 9 5
+id: C, size: 3, pos: 12 1
+id: C, size: 3, pos: 2 8
+id: D, size: 2, pos: 6 6
+id: D, size: 2, pos: 6 4
+id: D, size: 2, pos: 2 6
+id: s, size: 1, pos: 9 8
+id: s, size: 1, pos: 10 0
+id: s, size: 1, pos: 0 6
+id: s, size: 1, pos: 8 0
+-
+mapa: 15 15
+id: S, size: 4, pos: 11 7
+id: C, size: 3, pos: 7 2
+id: C, size: 3, pos: 3 7
+id: D, size: 2, pos: 4 0
+id: D, size: 2, pos: 11 10
+id: D, size: 2, pos: 10 4
+id: s, size: 1, pos: 3 14
+id: s, size: 1, pos: 13 0
+id: s, size: 1, pos: 14 4
+id: s, size: 1, pos: 0 0
+-
+mapa: 15 15
+id: S, size: 4, pos: 5 6
+id: C, size: 3, pos: 1 14
+id: C, size: 3, pos: 11 5
+id: D, size: 2, pos: 12 12
+id: D, size: 2, pos: 10 14
+id: D, size: 2, pos: 11 7
+id: s, size: 1, pos: 10 0
+id: s, size: 1, pos: 3 10
+id: s, size: 1, pos: 1 1
+id: s, size: 1, pos: 12 10
+-
+mapa: 15 15
+id: S, size: 4, pos: 8 7
+id: C, size: 3, pos: 8 1
+id: C, size: 3, pos: 11 11
+id: D, size: 2, pos: 3 14
+id: D, size: 2, pos: 8 13
+id: D, size: 2, pos: 0 6
+id: s, size: 1, pos: 3 1
+id: s, size: 1, pos: 14 13
+id: s, size: 1, pos: 4 12
+id: s, size: 1, pos: 9 10
+-
+mapa: 15 15
+id: S, size: 4, pos: 6 14
+id: C, size: 3, pos: 11 9
+id: C, size: 3, pos: 1 12
+id: D, size: 2, pos: 5 5
+id: D, size: 2, pos: 9 2
+id: D, size: 2, pos: 4 8
+id: s, size: 1, pos: 13 3
+id: s, size: 1, pos: 9 5
+id: s, size: 1, pos: 5 2
+id: s, size: 1, pos: 9 9
+-
+mapa: 15 15
+id: S, size: 4, pos: 4 1
+id: C, size: 3, pos: 12 8
+id: C, size: 3, pos: 2 9
+id: D, size: 2, pos: 5 6
+id: D, size: 2, pos: 12 13
+id: D, size: 2, pos: 3 11
+id: s, size: 1, pos: 9 3
+id: s, size: 1, pos: 10 6
+id: s, size: 1, pos: 13 0
+id: s, size: 1, pos: 13 4
+-
+mapa: 15 15
+id: S, size: 4, pos: 10 13
+id: C, size: 3, pos: 10 9
+id: C, size: 3, pos: 10 2
+id: D, size: 2, pos: 2 10
+id: D, size: 2, pos: 1 8
+id: D, size: 2, pos: 11 6
+id: s, size: 1, pos: 2 1
+id: s, size: 1, pos: 4 8
+id: s, size: 1, pos: 8 8
+id: s, size: 1, pos: 13 4
+-
+mapa: 15 15
+id: S, size: 4, pos: 3 5
+id: C, size: 3, pos: 4 8
+id: C, size: 3, pos: 10 14
+id: D, size: 2, pos: 1 9
+id: D, size: 2, pos: 8 3
+id: D, size: 2, pos: 11 3
+id: s, size: 1, pos: 2 1
+id: s, size: 1, pos: 6 10
+id: s, size: 1, pos: 8 1
+id: s, size: 1, pos: 0 6
+-
+mapa: 15 15
+id: S, size: 4, pos: 7 1
+id: C, size: 3, pos: 8 11
+id: C, size: 3, pos: 5 5
+id: D, size: 2, pos: 3 8
+id: D, size: 2, pos: 13 13
+id: D, size: 2, pos: 4 14
+id: s, size: 1, pos: 5 11
+id: s, size: 1, pos: 9 8
+id: s, size: 1, pos: 4 2
+id: s, size: 1, pos: 11 5
+-
+mapa: 15 15
+id: S, size: 4, pos: 5 10
+id: C, size: 3, pos: 10 9
+id: C, size: 3, pos: 7 12
+id: D, size: 2, pos: 0 9
+id: D, size: 2, pos: 3 3
+id: D, size: 2, pos: 5 6
+id: s, size: 1, pos: 4 0
+id: s, size: 1, pos: 1 5
+id: s, size: 1, pos: 2 12
+id: s, size: 1, pos: 10 14
+-
+mapa: 15 15
+id: S, size: 4, pos: 3 10
+id: C, size: 3, pos: 3 1
+id: C, size: 3, pos: 10 12
+id: D, size: 2, pos: 12 14
+id: D, size: 2, pos: 4 7
+id: D, size: 2, pos: 13 8
+id: s, size: 1, pos: 6 13
+id: s, size: 1, pos: 11 1
+id: s, size: 1, pos: 7 3
+id: s, size: 1, pos: 12 4
+-
+mapa: 15 15
+id: S, size: 4, pos: 8 12
+id: C, size: 3, pos: 0 5
+id: C, size: 3, pos: 6 5
+id: D, size: 2, pos: 5 7
+id: D, size: 2, pos: 3 1
+id: D, size: 2, pos: 10 2
+id: s, size: 1, pos: 0 13
+id: s, size: 1, pos: 0 10
+id: s, size: 1, pos: 3 10
+id: s, size: 1, pos: 12 5
+-
+mapa: 15 15
+id: S, size: 4, pos: 11 5
+id: C, size: 3, pos: 7 7
+id: C, size: 3, pos: 11 1
+id: D, size: 2, pos: 3 4
+id: D, size: 2, pos: 12 10
+id: D, size: 2, pos: 11 13
+id: s, size: 1, pos: 4 12
+id: s, size: 1, pos: 0 2
+id: s, size: 1, pos: 8 5
+id: s, size: 1, pos: 1 5
+-
+mapa: 15 15
+id: S, size: 4, pos: 7 12
+id: C, size: 3, pos: 4 8
+id: C, size: 3, pos: 6 3
+id: D, size: 2, pos: 3 6
+id: D, size: 2, pos: 10 5
+id: D, size: 2, pos: 6 1
+id: s, size: 1, pos: 4 13
+id: s, size: 1, pos: 0 11
+id: s, size: 1, pos: 0 0
+id: s, size: 1, pos: 13 8
+-
+mapa: 15 15
+id: S, size: 4, pos: 5 6
+id: C, size: 3, pos: 4 0
+id: C, size: 3, pos: 4 10
+id: D, size: 2, pos: 13 7
+id: D, size: 2, pos: 11 13
+id: D, size: 2, pos: 1 14
+id: s, size: 1, pos: 12 2
+id: s, size: 1, pos: 5 2
+id: s, size: 1, pos: 9 14
+id: s, size: 1, pos: 4 13
+-
+mapa: 15 15
+id: S, size: 4, pos: 3 9
+id: C, size: 3, pos: 4 12
+id: C, size: 3, pos: 11 5
+id: D, size: 2, pos: 6 1
+id: D, size: 2, pos: 13 10
+id: D, size: 2, pos: 5 14
+id: s, size: 1, pos: 1 13
+id: s, size: 1, pos: 11 8
+id: s, size: 1, pos: 9 9
+id: s, size: 1, pos: 9 13
+-
+mapa: 15 15
+id: S, size: 4, pos: 11 2
+id: C, size: 3, pos: 5 0
+id: C, size: 3, pos: 12 11
+id: D, size: 2, pos: 7 8
+id: D, size: 2, pos: 7 10
+id: D, size: 2, pos: 11 7
+id: s, size: 1, pos: 6 5
+id: s, size: 1, pos: 9 5
+id: s, size: 1, pos: 7 2
+id: s, size: 1, pos: 0 1
+-
+mapa: 15 15
+id: S, size: 4, pos: 3 11
+id: C, size: 3, pos: 12 11
+id: C, size: 3, pos: 4 14
+id: D, size: 2, pos: 1 6
+id: D, size: 2, pos: 9 7
+id: D, size: 2, pos: 8 11
+id: s, size: 1, pos: 12 1
+id: s, size: 1, pos: 2 14
+id: s, size: 1, pos: 13 14
+id: s, size: 1, pos: 4 0
+-
+mapa: 15 15
+id: S, size: 4, pos: 8 0
+id: C, size: 3, pos: 6 10
+id: C, size: 3, pos: 8 12
+id: D, size: 2, pos: 0 13
+id: D, size: 2, pos: 5 14
+id: D, size: 2, pos: 5 2
+id: s, size: 1, pos: 7 5
+id: s, size: 1, pos: 9 4
+id: s, size: 1, pos: 6 0
+id: s, size: 1, pos: 7 8
+-
+mapa: 15 15
+id: S, size: 4, pos: 2 14
+id: C, size: 3, pos: 6 12
+id: C, size: 3, pos: 9 10
+id: D, size: 2, pos: 1 1
+id: D, size: 2, pos: 12 6
+id: D, size: 2, pos: 10 0
+id: s, size: 1, pos: 1 4
+id: s, size: 1, pos: 1 8
+id: s, size: 1, pos: 10 14
+id: s, size: 1, pos: 6 10
+-
+mapa: 15 15
+id: S, size: 4, pos: 9 10
+id: C, size: 3, pos: 3 4
+id: C, size: 3, pos: 10 2
+id: D, size: 2, pos: 9 5
+id: D, size: 2, pos: 3 12
+id: D, size: 2, pos: 6 2
+id: s, size: 1, pos: 9 7
+id: s, size: 1, pos: 0 1
+id: s, size: 1, pos: 8 14
+id: s, size: 1, pos: 10 14
+-
+mapa: 15 15
+id: S, size: 4, pos: 11 3
+id: C, size: 3, pos: 3 5
+id: C, size: 3, pos: 12 9
+id: D, size: 2, pos: 3 8
+id: D, size: 2, pos: 8 10
+id: D, size: 2, pos: 0 12
+id: s, size: 1, pos: 3 0
+id: s, size: 1, pos: 0 8
+id: s, size: 1, pos: 1 6
+id: s, size: 1, pos: 14 13
+-
+mapa: 15 15
+id: S, size: 4, pos: 3 3
+id: C, size: 3, pos: 1 11
+id: C, size: 3, pos: 12 7
+id: D, size: 2, pos: 4 1
+id: D, size: 2, pos: 8 2
+id: D, size: 2, pos: 5 5
+id: s, size: 1, pos: 0 4
+id: s, size: 1, pos: 9 7
+id: s, size: 1, pos: 11 14
+id: s, size: 1, pos: 0 8
+-
+mapa: 15 15
+id: S, size: 4, pos: 3 2
+id: C, size: 3, pos: 0 12
+id: C, size: 3, pos: 12 5
+id: D, size: 2, pos: 11 13
+id: D, size: 2, pos: 6 11
+id: D, size: 2, pos: 4 8
+id: s, size: 1, pos: 2 10
+id: s, size: 1, pos: 14 10
+id: s, size: 1, pos: 8 4
+id: s, size: 1, pos: 2 8
+-
+mapa: 15 15
+id: S, size: 4, pos: 2 8
+id: C, size: 3, pos: 9 11
+id: C, size: 3, pos: 11 1
+id: D, size: 2, pos: 5 13
+id: D, size: 2, pos: 4 2
+id: D, size: 2, pos: 4 10
+id: s, size: 1, pos: 2 3
+id: s, size: 1, pos: 13 3
+id: s, size: 1, pos: 7 8
+id: s, size: 1, pos: 2 1
+-
+mapa: 15 15
+id: S, size: 4, pos: 7 3
+id: C, size: 3, pos: 3 5
+id: C, size: 3, pos: 5 9
+id: D, size: 2, pos: 13 0
+id: D, size: 2, pos: 5 14
+id: D, size: 2, pos: 12 9
+id: s, size: 1, pos: 14 2
+id: s, size: 1, pos: 0 11
+id: s, size: 1, pos: 6 7
+id: s, size: 1, pos: 1 9
+-
+mapa: 15 15
+id: S, size: 4, pos: 0 10
+id: C, size: 3, pos: 12 11
+id: C, size: 3, pos: 2 2
+id: D, size: 2, pos: 9 5
+id: D, size: 2, pos: 1 12
+id: D, size: 2, pos: 2 14
+id: s, size: 1, pos: 11 9
+id: s, size: 1, pos: 5 9
+id: s, size: 1, pos: 5 0
+id: s, size: 1, pos: 4 7
+-
+mapa: 15 15
+id: S, size: 4, pos: 9 7
+id: C, size: 3, pos: 9 10
+id: C, size: 3, pos: 6 13
+id: D, size: 2, pos: 4 6
+id: D, size: 2, pos: 8 3
+id: D, size: 2, pos: 12 4
+id: s, size: 1, pos: 0 9
+id: s, size: 1, pos: 1 1
+id: s, size: 1, pos: 0 7
+id: s, size: 1, pos: 8 5
+-
+mapa: 15 15
+id: S, size: 4, pos: 8 10
+id: C, size: 3, pos: 11 0
+id: C, size: 3, pos: 0 3
+id: D, size: 2, pos: 9 13
+id: D, size: 2, pos: 2 0
+id: D, size: 2, pos: 3 7
+id: s, size: 1, pos: 2 14
+id: s, size: 1, pos: 5 9
+id: s, size: 1, pos: 5 13
+id: s, size: 1, pos: 8 1
+-
+mapa: 15 15
+id: S, size: 4, pos: 4 4
+id: C, size: 3, pos: 2 2
+id: C, size: 3, pos: 11 6
+id: D, size: 2, pos: 0 11
+id: D, size: 2, pos: 12 13
+id: D, size: 2, pos: 2 9
+id: s, size: 1, pos: 14 3
+id: s, size: 1, pos: 13 10
+id: s, size: 1, pos: 7 0
+id: s, size: 1, pos: 8 9
+-
+mapa: 15 15
+id: S, size: 4, pos: 9 10
+id: C, size: 3, pos: 8 0
+id: C, size: 3, pos: 2 9
+id: D, size: 2, pos: 0 0
+id: D, size: 2, pos: 3 7
+id: D, size: 2, pos: 2 13
+id: s, size: 1, pos: 0 14
+id: s, size: 1, pos: 7 10
+id: s, size: 1, pos: 12 4
+id: s, size: 1, pos: 14 9
+-
+mapa: 15 15
+id: S, size: 4, pos: 2 0
+id: C, size: 3, pos: 7 9
+id: C, size: 3, pos: 9 14
+id: D, size: 2, pos: 3 4
+id: D, size: 2, pos: 10 0
+id: D, size: 2, pos: 13 3
+id: s, size: 1, pos: 9 2
+id: s, size: 1, pos: 4 11
+id: s, size: 1, pos: 4 8
+id: s, size: 1, pos: 13 6
+-
+mapa: 15 15
+id: S, size: 4, pos: 5 8
+id: C, size: 3, pos: 6 2
+id: C, size: 3, pos: 1 1
+id: D, size: 2, pos: 6 5
+id: D, size: 2, pos: 1 6
+id: D, size: 2, pos: 12 1
+id: s, size: 1, pos: 12 4
+id: s, size: 1, pos: 7 10
+id: s, size: 1, pos: 2 9
+id: s, size: 1, pos: 10 1
+-
+mapa: 15 15
+id: S, size: 4, pos: 2 10
+id: C, size: 3, pos: 7 8
+id: C, size: 3, pos: 11 11
+id: D, size: 2, pos: 12 2
+id: D, size: 2, pos: 9 3
+id: D, size: 2, pos: 1 2
+id: s, size: 1, pos: 0 11
+id: s, size: 1, pos: 1 5
+id: s, size: 1, pos: 5 3
+id: s, size: 1, pos: 8 11
+-
+mapa: 15 15
+id: S, size: 4, pos: 6 6
+id: C, size: 3, pos: 3 4
+id: C, size: 3, pos: 7 12
+id: D, size: 2, pos: 13 5
+id: D, size: 2, pos: 1 13
+id: D, size: 2, pos: 11 13
+id: s, size: 1, pos: 7 0
+id: s, size: 1, pos: 0 8
+id: s, size: 1, pos: 1 1
+id: s, size: 1, pos: 9 3
+-
+mapa: 15 15
+id: S, size: 4, pos: 11 12
+id: C, size: 3, pos: 9 8
+id: C, size: 3, pos: 4 8
+id: D, size: 2, pos: 0 3
+id: D, size: 2, pos: 10 5
+id: D, size: 2, pos: 5 6
+id: s, size: 1, pos: 5 3
+id: s, size: 1, pos: 12 0
+id: s, size: 1, pos: 14 8
+id: s, size: 1, pos: 14 3
+-
+mapa: 15 15
+id: S, size: 4, pos: 0 8
+id: C, size: 3, pos: 4 14
+id: C, size: 3, pos: 12 4
+id: D, size: 2, pos: 3 4
+id: D, size: 2, pos: 12 13
+id: D, size: 2, pos: 3 10
+id: s, size: 1, pos: 10 5
+id: s, size: 1, pos: 0 0
+id: s, size: 1, pos: 6 10
+id: s, size: 1, pos: 2 12
+-
+mapa: 15 15
+id: S, size: 4, pos: 5 12
+id: C, size: 3, pos: 10 1
+id: C, size: 3, pos: 4 14
+id: D, size: 2, pos: 2 6
+id: D, size: 2, pos: 9 5
+id: D, size: 2, pos: 11 10
+id: s, size: 1, pos: 5 8
+id: s, size: 1, pos: 3 8
+id: s, size: 1, pos: 0 1
+id: s, size: 1, pos: 7 0
+-
+mapa: 15 15
+id: S, size: 4, pos: 1 9
+id: C, size: 3, pos: 11 5
+id: C, size: 3, pos: 5 5
+id: D, size: 2, pos: 0 4
+id: D, size: 2, pos: 11 2
+id: D, size: 2, pos: 1 7
+id: s, size: 1, pos: 6 9
+id: s, size: 1, pos: 4 3
+id: s, size: 1, pos: 12 7
+id: s, size: 1, pos: 12 14
+-
+mapa: 15 15
+id: S, size: 4, pos: 8 11
+id: C, size: 3, pos: 2 4
+id: C, size: 3, pos: 1 9
+id: D, size: 2, pos: 0 12
+id: D, size: 2, pos: 4 13
+id: D, size: 2, pos: 13 6
+id: s, size: 1, pos: 3 11
+id: s, size: 1, pos: 0 1
+id: s, size: 1, pos: 9 8
+id: s, size: 1, pos: 3 6
+-
+mapa: 15 15
+id: S, size: 4, pos: 3 5
+id: C, size: 3, pos: 12 11
+id: C, size: 3, pos: 12 5
+id: D, size: 2, pos: 9 10
+id: D, size: 2, pos: 2 9
+id: D, size: 2, pos: 11 1
+id: s, size: 1, pos: 12 13
+id: s, size: 1, pos: 7 8
+id: s, size: 1, pos: 0 8
+id: s, size: 1, pos: 1 1
+-
+mapa: 15 15
+id: S, size: 4, pos: 11 12
+id: C, size: 3, pos: 2 5
+id: C, size: 3, pos: 9 4
+id: D, size: 2, pos: 10 1
+id: D, size: 2, pos: 0 1
+id: D, size: 2, pos: 7 9
+id: s, size: 1, pos: 7 0
+id: s, size: 1, pos: 4 12
+id: s, size: 1, pos: 0 13
+id: s, size: 1, pos: 13 1
+-
+mapa: 15 15
+id: S, size: 4, pos: 8 3
+id: C, size: 3, pos: 8 14
+id: C, size: 3, pos: 3 1
+id: D, size: 2, pos: 4 12
+id: D, size: 2, pos: 5 6
+id: D, size: 2, pos: 10 10
+id: s, size: 1, pos: 14 2
+id: s, size: 1, pos: 8 0
+id: s, size: 1, pos: 8 7
+id: s, size: 1, pos: 11 0
+-
+mapa: 15 15
+id: S, size: 4, pos: 6 0
+id: C, size: 3, pos: 5 12
+id: C, size: 3, pos: 11 3
+id: D, size: 2, pos: 2 3
+id: D, size: 2, pos: 4 9
+id: D, size: 2, pos: 5 3
+id: s, size: 1, pos: 7 7
+id: s, size: 1, pos: 3 11
+id: s, size: 1, pos: 9 7
+id: s, size: 1, pos: 12 14
+-
+mapa: 15 15
+id: S, size: 4, pos: 8 4
+id: C, size: 3, pos: 9 13
+id: C, size: 3, pos: 1 13
+id: D, size: 2, pos: 1 1
+id: D, size: 2, pos: 9 0
+id: D, size: 2, pos: 3 5
+id: s, size: 1, pos: 0 3
+id: s, size: 1, pos: 7 7
+id: s, size: 1, pos: 11 10
+id: s, size: 1, pos: 7 12
+-
+mapa: 15 15
+id: S, size: 4, pos: 7 11
+id: C, size: 3, pos: 2 11
+id: C, size: 3, pos: 2 14
+id: D, size: 2, pos: 9 8
+id: D, size: 2, pos: 6 9
+id: D, size: 2, pos: 2 8
+id: s, size: 1, pos: 9 1
+id: s, size: 1, pos: 0 10
+id: s, size: 1, pos: 8 14
+id: s, size: 1, pos: 3 5
+-
+mapa: 15 15
+id: S, size: 4, pos: 1 14
+id: C, size: 3, pos: 8 7
+id: C, size: 3, pos: 0 8
+id: D, size: 2, pos: 0 10
+id: D, size: 2, pos: 4 10
+id: D, size: 2, pos: 1 0
+id: s, size: 1, pos: 7 12
+id: s, size: 1, pos: 12 3
+id: s, size: 1, pos: 13 10
+id: s, size: 1, pos: 12 8
+-
+mapa: 15 15
+id: S, size: 4, pos: 11 0
+id: C, size: 3, pos: 6 14
+id: C, size: 3, pos: 0 9
+id: D, size: 2, pos: 13 4
+id: D, size: 2, pos: 13 2
+id: D, size: 2, pos: 3 2
+id: s, size: 1, pos: 3 5
+id: s, size: 1, pos: 5 0
+id: s, size: 1, pos: 11 3
+id: s, size: 1, pos: 1 7
+-
+mapa: 15 15
+id: S, size: 4, pos: 9 5
+id: C, size: 3, pos: 0 2
+id: C, size: 3, pos: 9 0
+id: D, size: 2, pos: 10 14
+id: D, size: 2, pos: 7 2
+id: D, size: 2, pos: 2 0
+id: s, size: 1, pos: 14 7
+id: s, size: 1, pos: 11 10
+id: s, size: 1, pos: 7 9
+id: s, size: 1, pos: 7 14
+-
+mapa: 15 15
+id: S, size: 4, pos: 9 9
+id: C, size: 3, pos: 3 9
+id: C, size: 3, pos: 0 11
+id: D, size: 2, pos: 13 2
+id: D, size: 2, pos: 12 12
+id: D, size: 2, pos: 4 12
+id: s, size: 1, pos: 8 3
+id: s, size: 1, pos: 3 7
+id: s, size: 1, pos: 10 6
+id: s, size: 1, pos: 14 6
+-
+mapa: 15 15
+id: S, size: 4, pos: 7 3
+id: C, size: 3, pos: 10 6
+id: C, size: 3, pos: 11 13
+id: D, size: 2, pos: 4 13
+id: D, size: 2, pos: 1 4
+id: D, size: 2, pos: 5 11
+id: s, size: 1, pos: 2 12
+id: s, size: 1, pos: 12 1
+id: s, size: 1, pos: 2 1
+id: s, size: 1, pos: 8 1
+-
+mapa: 15 15
+id: S, size: 4, pos: 5 5
+id: C, size: 3, pos: 11 6
+id: C, size: 3, pos: 2 11
+id: D, size: 2, pos: 13 4
+id: D, size: 2, pos: 7 8
+id: D, size: 2, pos: 1 0
+id: s, size: 1, pos: 14 2
+id: s, size: 1, pos: 6 2
+id: s, size: 1, pos: 8 1
+id: s, size: 1, pos: 12 0
+-
+mapa: 15 15
+id: S, size: 4, pos: 4 3
+id: C, size: 3, pos: 7 8
+id: C, size: 3, pos: 0 13
+id: D, size: 2, pos: 4 9
+id: D, size: 2, pos: 12 14
+id: D, size: 2, pos: 0 5
+id: s, size: 1, pos: 11 10
+id: s, size: 1, pos: 7 6
+id: s, size: 1, pos: 13 10
+id: s, size: 1, pos: 6 12
+-
+mapa: 15 15
+id: S, size: 4, pos: 6 0
+id: C, size: 3, pos: 6 7
+id: C, size: 3, pos: 7 13
+id: D, size: 2, pos: 0 12
+id: D, size: 2, pos: 8 2
+id: D, size: 2, pos: 3 13
+id: s, size: 1, pos: 0 3
+id: s, size: 1, pos: 12 3
+id: s, size: 1, pos: 4 0
+id: s, size: 1, pos: 5 2
+-
+mapa: 15 15
+id: S, size: 4, pos: 2 11
+id: C, size: 3, pos: 2 4
+id: C, size: 3, pos: 2 9
+id: D, size: 2, pos: 5 7
+id: D, size: 2, pos: 13 1
+id: D, size: 2, pos: 8 12
+id: s, size: 1, pos: 13 13
+id: s, size: 1, pos: 8 0
+id: s, size: 1, pos: 2 7
+id: s, size: 1, pos: 14 4
+-
+mapa: 15 15
+id: S, size: 4, pos: 10 14
+id: C, size: 3, pos: 7 10
+id: C, size: 3, pos: 0 5
+id: D, size: 2, pos: 1 1
+id: D, size: 2, pos: 13 8
+id: D, size: 2, pos: 9 2
+id: s, size: 1, pos: 5 5
+id: s, size: 1, pos: 4 12
+id: s, size: 1, pos: 0 9
+id: s, size: 1, pos: 5 9
+-
+mapa: 15 15
+id: S, size: 4, pos: 4 4
+id: C, size: 3, pos: 6 9
+id: C, size: 3, pos: 3 0
+id: D, size: 2, pos: 12 12
+id: D, size: 2, pos: 6 12
+id: D, size: 2, pos: 13 4
+id: s, size: 1, pos: 0 9
+id: s, size: 1, pos: 9 3
+id: s, size: 1, pos: 1 0
+id: s, size: 1, pos: 11 5
+-
+mapa: 15 15
+id: S, size: 4, pos: 2 12
+id: C, size: 3, pos: 11 0
+id: C, size: 3, pos: 0 2
+id: D, size: 2, pos: 4 3
+id: D, size: 2, pos: 8 9
+id: D, size: 2, pos: 1 7
+id: s, size: 1, pos: 2 4
+id: s, size: 1, pos: 3 14
+id: s, size: 1, pos: 7 2
+id: s, size: 1, pos: 5 7
+-
+mapa: 15 15
+id: S, size: 4, pos: 4 14
+id: C, size: 3, pos: 4 6
+id: C, size: 3, pos: 3 10
+id: D, size: 2, pos: 8 0
+id: D, size: 2, pos: 3 1
+id: D, size: 2, pos: 2 3
+id: s, size: 1, pos: 14 12
+id: s, size: 1, pos: 9 10
+id: s, size: 1, pos: 11 0
+id: s, size: 1, pos: 8 7
+-
+mapa: 15 15
+id: S, size: 4, pos: 5 8
+id: C, size: 3, pos: 1 0
+id: C, size: 3, pos: 12 0
+id: D, size: 2, pos: 0 6
+id: D, size: 2, pos: 10 5
+id: D, size: 2, pos: 0 9
+id: s, size: 1, pos: 14 10
+id: s, size: 1, pos: 8 1
+id: s, size: 1, pos: 13 8
+id: s, size: 1, pos: 10 12
+-
+mapa: 15 15
+id: S, size: 4, pos: 3 3
+id: C, size: 3, pos: 2 1
+id: C, size: 3, pos: 7 6
+id: D, size: 2, pos: 4 7
+id: D, size: 2, pos: 11 6
+id: D, size: 2, pos: 12 1
+id: s, size: 1, pos: 13 8
+id: s, size: 1, pos: 0 10
+id: s, size: 1, pos: 2 11
+id: s, size: 1, pos: 3 14
+-
+mapa: 15 15
+id: S, size: 4, pos: 4 3
+id: C, size: 3, pos: 0 5
+id: C, size: 3, pos: 9 14
+id: D, size: 2, pos: 13 4
+id: D, size: 2, pos: 9 7
+id: D, size: 2, pos: 5 9
+id: s, size: 1, pos: 2 0
+id: s, size: 1, pos: 13 2
+id: s, size: 1, pos: 12 0
+id: s, size: 1, pos: 1 8
+-
+mapa: 15 15
+id: S, size: 4, pos: 7 2
+id: C, size: 3, pos: 11 8
+id: C, size: 3, pos: 4 11
+id: D, size: 2, pos: 7 5
+id: D, size: 2, pos: 12 5
+id: D, size: 2, pos: 2 1
+id: s, size: 1, pos: 0 1
+id: s, size: 1, pos: 10 10
+id: s, size: 1, pos: 12 12
+id: s, size: 1, pos: 6 0
+-
+mapa: 15 15
+id: S, size: 4, pos: 4 6
+id: C, size: 3, pos: 10 9
+id: C, size: 3, pos: 8 1
+id: D, size: 2, pos: 3 12
+id: D, size: 2, pos: 9 5
+id: D, size: 2, pos: 10 7
+id: s, size: 1, pos: 2 0
+id: s, size: 1, pos: 12 2
+id: s, size: 1, pos: 7 14
+id: s, size: 1, pos: 13 12
+-
+mapa: 15 15
+id: S, size: 4, pos: 2 13
+id: C, size: 3, pos: 5 9
+id: C, size: 3, pos: 1 2
+id: D, size: 2, pos: 8 14
+id: D, size: 2, pos: 7 7
+id: D, size: 2, pos: 9 10
+id: s, size: 1, pos: 0 8
+id: s, size: 1, pos: 9 2
+id: s, size: 1, pos: 11 3
+id: s, size: 1, pos: 3 7
+-
+mapa: 15 15
+id: S, size: 4, pos: 4 12
+id: C, size: 3, pos: 0 12
+id: C, size: 3, pos: 12 1
+id: D, size: 2, pos: 10 4
+id: D, size: 2, pos: 4 4
+id: D, size: 2, pos: 4 1
+id: s, size: 1, pos: 2 3
+id: s, size: 1, pos: 11 12
+id: s, size: 1, pos: 11 10
+id: s, size: 1, pos: 4 6
+-
+mapa: 15 15
+id: S, size: 4, pos: 8 4
+id: C, size: 3, pos: 8 14
+id: C, size: 3, pos: 5 7
+id: D, size: 2, pos: 7 9
+id: D, size: 2, pos: 2 7
+id: D, size: 2, pos: 6 11
+id: s, size: 1, pos: 6 0
+id: s, size: 1, pos: 4 14
+id: s, size: 1, pos: 6 2
+id: s, size: 1, pos: 13 9
+-
+mapa: 15 15
+id: S, size: 4, pos: 2 3
+id: C, size: 3, pos: 12 3
+id: C, size: 3, pos: 0 9
+id: D, size: 2, pos: 12 9
+id: D, size: 2, pos: 12 13
+id: D, size: 2, pos: 8 5
+id: s, size: 1, pos: 4 9
+id: s, size: 1, pos: 8 10
+id: s, size: 1, pos: 5 11
+id: s, size: 1, pos: 1 12
+-
+mapa: 15 15
+id: S, size: 4, pos: 10 14
+id: C, size: 3, pos: 3 3
+id: C, size: 3, pos: 6 7
+id: D, size: 2, pos: 2 13
+id: D, size: 2, pos: 3 10
+id: D, size: 2, pos: 6 5
+id: s, size: 1, pos: 10 7
+id: s, size: 1, pos: 1 0
+id: s, size: 1, pos: 12 4
+id: s, size: 1, pos: 3 8
+-
+mapa: 15 15
+id: S, size: 4, pos: 4 14
+id: C, size: 3, pos: 5 4
+id: C, size: 3, pos: 1 11
+id: D, size: 2, pos: 8 9
+id: D, size: 2, pos: 10 11
+id: D, size: 2, pos: 13 12
+id: s, size: 1, pos: 1 2
+id: s, size: 1, pos: 8 12
+id: s, size: 1, pos: 6 1
+id: s, size: 1, pos: 11 14
+-
+mapa: 15 15
+id: S, size: 4, pos: 11 11
+id: C, size: 3, pos: 3 0
+id: C, size: 3, pos: 0 4
+id: D, size: 2, pos: 12 13
+id: D, size: 2, pos: 4 5
+id: D, size: 2, pos: 6 9
+id: s, size: 1, pos: 14 0
+id: s, size: 1, pos: 10 4
+id: s, size: 1, pos: 12 6
+id: s, size: 1, pos: 14 6
+-
+mapa: 15 15
+id: S, size: 4, pos: 8 3
+id: C, size: 3, pos: 5 1
+id: C, size: 3, pos: 9 12
+id: D, size: 2, pos: 3 7
+id: D, size: 2, pos: 3 14
+id: D, size: 2, pos: 12 5
+id: s, size: 1, pos: 0 13
+id: s, size: 1, pos: 10 6
+id: s, size: 1, pos: 4 5
+id: s, size: 1, pos: 8 14
+-
+mapa: 15 15
+id: S, size: 4, pos: 9 3
+id: C, size: 3, pos: 5 11
+id: C, size: 3, pos: 10 9
+id: D, size: 2, pos: 10 13
+id: D, size: 2, pos: 1 13
+id: D, size: 2, pos: 10 0
+id: s, size: 1, pos: 0 0
+id: s, size: 1, pos: 12 11
+id: s, size: 1, pos: 14 0
+id: s, size: 1, pos: 8 14
+-
+mapa: 15 15
+id: S, size: 4, pos: 8 6
+id: C, size: 3, pos: 4 9
+id: C, size: 3, pos: 12 9
+id: D, size: 2, pos: 4 7
+id: D, size: 2, pos: 9 0
+id: D, size: 2, pos: 0 2
+id: s, size: 1, pos: 9 14
+id: s, size: 1, pos: 11 11
+id: s, size: 1, pos: 1 4
+id: s, size: 1, pos: 8 4
+-
+mapa: 15 15
+id: S, size: 4, pos: 3 4
+id: C, size: 3, pos: 0 0
+id: C, size: 3, pos: 11 2
+id: D, size: 2, pos: 4 12
+id: D, size: 2, pos: 12 10
+id: D, size: 2, pos: 4 7
+id: s, size: 1, pos: 1 4
+id: s, size: 1, pos: 10 11
+id: s, size: 1, pos: 5 10
+id: s, size: 1, pos: 11 4
+-
+mapa: 15 15
+id: S, size: 4, pos: 8 13
+id: C, size: 3, pos: 10 9
+id: C, size: 3, pos: 10 7
+id: D, size: 2, pos: 5 13
+id: D, size: 2, pos: 5 1
+id: D, size: 2, pos: 2 9
+id: s, size: 1, pos: 11 11
+id: s, size: 1, pos: 1 12
+id: s, size: 1, pos: 14 14
+id: s, size: 1, pos: 5 11
+-
+mapa: 15 15
+id: S, size: 4, pos: 10 13
+id: C, size: 3, pos: 7 0
+id: C, size: 3, pos: 1 1
+id: D, size: 2, pos: 7 13
+id: D, size: 2, pos: 4 12
+id: D, size: 2, pos: 4 8
+id: s, size: 1, pos: 14 1
+id: s, size: 1, pos: 12 4
+id: s, size: 1, pos: 8 6
+id: s, size: 1, pos: 1 14
+-
+mapa: 15 15
+id: S, size: 4, pos: 5 7
+id: C, size: 3, pos: 12 13
+id: C, size: 3, pos: 7 10
+id: D, size: 2, pos: 5 14
+id: D, size: 2, pos: 12 2
+id: D, size: 2, pos: 3 3
+id: s, size: 1, pos: 13 10
+id: s, size: 1, pos: 3 5
+id: s, size: 1, pos: 13 8
+id: s, size: 1, pos: 3 10
+-
+mapa: 15 15
+id: S, size: 4, pos: 6 7
+id: C, size: 3, pos: 4 11
+id: C, size: 3, pos: 7 4
+id: D, size: 2, pos: 12 3
+id: D, size: 2, pos: 3 4
+id: D, size: 2, pos: 5 14
+id: s, size: 1, pos: 8 12
+id: s, size: 1, pos: 4 6
+id: s, size: 1, pos: 14 12
+id: s, size: 1, pos: 0 13
+-
+mapa: 15 15
+id: S, size: 4, pos: 9 5
+id: C, size: 3, pos: 7 3
+id: C, size: 3, pos: 0 10
+id: D, size: 2, pos: 7 9
+id: D, size: 2, pos: 13 1
+id: D, size: 2, pos: 10 13
+id: s, size: 1, pos: 2 14
+id: s, size: 1, pos: 5 7
+id: s, size: 1, pos: 5 12
+id: s, size: 1, pos: 10 10
+-
+mapa: 15 15
+id: S, size: 4, pos: 8 14
+id: C, size: 3, pos: 0 4
+id: C, size: 3, pos: 5 7
+id: D, size: 2, pos: 2 12
+id: D, size: 2, pos: 7 10
+id: D, size: 2, pos: 8 2
+id: s, size: 1, pos: 12 10
+id: s, size: 1, pos: 4 0
+id: s, size: 1, pos: 6 12
+id: s, size: 1, pos: 5 10
+-
+mapa: 15 15
+id: S, size: 4, pos: 1 9
+id: C, size: 3, pos: 1 12
+id: C, size: 3, pos: 1 5
+id: D, size: 2, pos: 8 12
+id: D, size: 2, pos: 8 8
+id: D, size: 2, pos: 11 0
+id: s, size: 1, pos: 6 7
+id: s, size: 1, pos: 12 5
+id: s, size: 1, pos: 0 1
+id: s, size: 1, pos: 5 12
+-
+mapa: 15 15
+id: S, size: 4, pos: 7 0
+id: C, size: 3, pos: 8 7
+id: C, size: 3, pos: 0 3
+id: D, size: 2, pos: 2 7
+id: D, size: 2, pos: 12 6
+id: D, size: 2, pos: 11 10
+id: s, size: 1, pos: 12 0
+id: s, size: 1, pos: 5 4
+id: s, size: 1, pos: 2 11
+id: s, size: 1, pos: 9 10
 -

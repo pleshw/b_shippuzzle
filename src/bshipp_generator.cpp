@@ -217,7 +217,7 @@ void Map_generator::view_all(void){
 
 void Map_generator::save_all(void){
 	this->save_file.open("mapas.txt");
-	this->save_file << this->Map_list.size() << " //number of maps";
+	this->save_file << this->Map_list.size();
 	for(unsigned int i(0); i < this->Map_list.size(); i++){
 		this->save_file << endl << "mapa: " << this->Map_list.back().width << " " << this->Map_list.back().height << endl;	
 		for(unsigned int j(0); j < this->Map_list[i].Ship_list.size(); j++){
