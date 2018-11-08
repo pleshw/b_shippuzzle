@@ -152,8 +152,8 @@ void Battle_map::place_a_ship(unsigned int x, unsigned int y, Boat & vessel, cha
 bool Battle_map::in_map_range(unsigned int x, unsigned int y, unsigned int size, char direction){
 	if (x >= this->width)  { return false; }
 	if (y >= this->height) { return false; }
-	if (x < 0)             { return false; }
-	if (y < 0)             { return false; }
+	// if (x < 0)             { return false; }
+	// if (y < 0)             { return false; }
 
 	if (direction == 'h'){
 		if(((x+size) <= this->width)){

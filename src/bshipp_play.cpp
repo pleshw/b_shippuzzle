@@ -7,9 +7,11 @@ using namespace std;
 
 
 
-int main(int argc, char const *argv[]){
+int main(){
 	
-	
+	Map_reader mr;
+
+	mr.create_maps (); 
 
 	return 0;
 }
