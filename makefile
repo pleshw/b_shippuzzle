@@ -1,24 +1,33 @@
-CC              = g++
-CPPFLAGS        = -Wall -std=c++11 -pedantic -Wextra
-GENERATOR       = gen_rand
-CONSOLE         = play
-_GEN_OBJS       = generate_map_random.o bshipp_generator.o
-_PLAY_OBJS      = bshipp_play.o bshipp_reader.o
-_PLAY_EXTRAS    = bshipp_generator.o
+CC               = g++
+CPPFLAGS         = -Wall -std=c++11 -pedantic -Wextra
+
+GENERATOR        = gen_rand
+PLAYER           = play
+
+_MANDATORY_OBJS  = Position.o Ship.o BattleMap.o 
+_PLAY_OBJS       = $(_MANDATORY_OBJS) Game.o
+_GEN_OBJS        = $(_MANDATORY_OBJS) MapGenerator.o
 
 
 build: $(_GEN_OBJS) $(_PLAY_OBJS)
 	$(CC) $(_GEN_OBJS) -o $(GENERATOR)
-	$(CC) $(_PLAY_EXTRAS) $(_PLAY_OBJS) -o $(CONSOLE)
+	$(CC) $(_PLAY_OBJS) -o $(PLAYER)
 	rm -rf build/*.o
 	mv *.o build/
 	./play
 
-generate_map_random.o:
-	$(CC) -c src/generate_map_random.cpp $(CPPFLAGS)
+Position.o:
+	$(CC) -c src/Position.cpp $(CPPFLAGS)
 
-bshipp_generator.o: include/bshipp_generator.hpp
-	$(CC) -c src/bshipp_generator.cpp $(CPPFLAGS)
+Ship.o: include/Position.h
+	$(CC) -c src/Ship.cpp $(CPPFLAGS)
+
+BattleMap.o: include/Position.h include/Ship.h
+	$(CC) -c src/BattleMap.cpp $(CPPFLAGS)
+
+MapGenerator.o: include/Position.h include/Ship.h include/BattleMap.h
+	$(CC) -c src/MapGenerator.cpp $(CPPFLAGS)
+
 
 
 
