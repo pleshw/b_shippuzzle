@@ -6,4 +6,4 @@
 
 --**Execute the game play: ./play [map_list]**              *//Not implemented yet.*
 
-    NOTE: In case of map list NO SET the game will start with a random map*
+    NOTE: In case of map list NO SET the game will start with a random map
