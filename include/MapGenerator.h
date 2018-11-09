@@ -23,15 +23,15 @@ class MapGenerator{
 		void          saveAll      ( void );
 		void          removeLast   ( void );
 		void          removeAll    ( void );
-		std::ostream  &operator << ( std::ostream &os, const MapGenerator &mg );
+		std::ostream  &operator << ( std::ostream &os, const MapGenerator &mg ); //show all maps
 
 	private:
 		bool  isWater        ( pos2d pos, unsigned int size, char direction );
 		bool  isShip         ( pos2d pos );
 		bool  isFreePosition ( pos2d pos );
 		bool  haveSpace      ( size_t size, char direction );
-		void  placeShip      ( pos2d pos, Ship & ship, char direction );
-		void  setBorder      ( Ship ship );
+		void  setShip        ( pos2d pos, Ship & ship, char direction );
+		void  setBorder      ( pos2d pos );
 };
 
 #endif

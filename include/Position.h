@@ -5,7 +5,8 @@
 #include <vector> 
 
 
-struct pos2d{
+struct pos2d
+{
 	int x;
 	int y;
 	pos2d( int _x = 0,  int _y = 0)
@@ -13,7 +14,8 @@ struct pos2d{
 		  y ( _y )
 		{/*EMPTY*/}
 
-	std::ostream &operator << ( std::ostream &os, const pos2d &p );
+	friend std::ostream &operator << ( std::ostream &os, const pos2d &p )
+		{ os << p.x << " " << p.y; return os; }
 };
 
 using Map = std::vector<pos2d>;

@@ -6,31 +6,30 @@
 #include <iostream>
 #include <vector>
 
-using grid = std::vector<vector<char>>;
+using Grid = std::vector<std::vector<char>>;
 
-struct BattleMap{
+class BattleMap{
+	private:
+		size_t width;
+		size_t height;
+		Grid   grid;
+		fleet  ships;
+		void init  ( void );
+
 	public:
 		BattleMap( const size_t _width = 15, const size_t _height = 15 )
 			: width  ( _width ),
 			  height ( _height )
 			{ init(); }
 
-		const Map    getFreeSpots ( void );
-		std::ostream &operator << ( std::ostream& os, const BattleMap &bm );
+		size_t  getWidth     ( void )      const;
+		size_t  getHeight    ( void )      const;
+		char    getElement   ( pos2d pos ) const;
+		Map     getFreeSpots ( void )      const;
 
-	private:
-		size_t   height;
-		size_t   width;
-		grid     sea;
-		fleet    ships;
-
-		inline void init        ( void );
-		void        setShip     ( void );
-		void        setFleet    ( fleet f );
-		char        getElement  ( pos2d pos );
+		friend std::ostream &operator << ( std::ostream &os, const BattleMap &bm );
 };
 
 using GameSet = std::vector<BattleMap>;
-
 
 #endif
