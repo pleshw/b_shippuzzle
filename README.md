@@ -1,4 +1,4 @@
---This is a project for one of ITs grades in UFRN
+# BATTLE SHIP PUZZLE
 
 --Build generator and bins: make build
 
