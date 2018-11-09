@@ -1,8 +1,8 @@
 CC               = g++
 CPPFLAGS         = -Wall -std=c++11 -pedantic -Wextra
 
-GENERATOR        = gen_rand
-PLAYER           = play
+GENERATOR        = bin/gen
+PLAYER           = bin/play
 
 _MANDATORY_OBJS  = BattleMap.o 
 _PLAY_OBJS       = $(_MANDATORY_OBJS) Game.o
@@ -14,7 +14,6 @@ build: $(_GEN_OBJS) $(_PLAY_OBJS)
 	$(CC) $(_PLAY_OBJS) -o $(PLAYER)
 	rm -rf build/*.o
 	mv *.o build/
-	./play
 
 BattleMap.o: include/Position.h include/Ship.h
 	$(CC) -c src/BattleMap.cpp $(CPPFLAGS)

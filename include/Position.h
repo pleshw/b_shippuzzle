@@ -2,8 +2,7 @@
 #define _BATTLESHIP_COORDINATES
 
 #include <iostream>
-#include <vector> 
-
+#include <vector>	 
 
 struct pos2d
 {
@@ -19,6 +18,5 @@ struct pos2d
 };
 
 using Map = std::vector<pos2d>;
-
 
 #endif

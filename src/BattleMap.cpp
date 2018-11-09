@@ -1,14 +1,6 @@
 #include "../include/BattleMap.h"
 
-std::ostream &operator << ( std::ostream& os, const BattleMap &bm )
-{
-	std::string str;
-	for (unsigned int y(0); y < bm.height; y++)
-		for (unsigned int x(0); x < bm.width; x++)
-			str += bm.grid[y][x] + " ";
-	os << str;
-	return os;
-}
+
 
 //initialize the grid of the map
 void BattleMap::init( void )
@@ -54,6 +46,8 @@ Map BattleMap::getFreeSpots( void ) const
 int main()
 {
 	BattleMap bm( 15, 15);
-	std::cout << std::endl << bm.getElement( pos2d(10, 10) ) << std::endl << std::endl;
+
+	std::cout << std::endl << bm << std::endl;
+
 	return 0;
 }

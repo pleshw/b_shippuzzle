@@ -12,24 +12,26 @@
 
 class MapGenerator{
 	public:
+		void      newMap      ( size_t width, size_t height ); //create a new map in mapList
+		BattleMap getMap      ( size_t selector ) const;       //get map [selector] from mapList
+		BattleMap getFirst    ( void )            const;       //get the first map from mapList
+		BattleMap getLast     ( void )            const;       //get the last map from mapList
+		GameSet   getMapList  ( void )            const;       //get the actual mapList
+		void      saveMap     ( size_t selector );             //save map [selector] from mapList in saveFile
+		void      saveFirst   ( void );                        //save the first map from mapList in saveFile
+		void      saveLast    ( void );                        //save the last map from mapList in saveFile
+		void      saveAll     ( void );	                       //save all maps from mapList in saveFile
+		void      removeLast  ( void );                        //remove last from mapList
+		void      removeAll   ( void );                        //remove all from mapList
+		
+	private:
 		GameSet        maplist;
 		std::ofstream  saveFile;
 		Map            freeSpots;
-
-		void          newMap       ( size_t width, size_t height );
-		BattleMap     viewLast     ( void );
-		void          getAll       ( void );
-		void          saveLast     ( void );
-		void          saveAll      ( void );
-		void          removeLast   ( void );
-		void          removeAll    ( void );
-		std::ostream  &operator << ( std::ostream &os, const MapGenerator &mg ); //show all maps
-
-	private:
-		bool  isWater        ( pos2d pos, unsigned int size, char direction );
-		bool  isShip         ( pos2d pos );
-		bool  isFreePosition ( pos2d pos );
-		bool  haveSpace      ( size_t size, char direction );
+		bool  isWater        ( pos2d pos, unsigned int size, char direction ) const;
+		bool  isShip         ( pos2d pos ) const;
+		bool  isFreePosition ( pos2d pos ) const;
+		bool  haveSpace      ( size_t size, char direction ) const;
 		void  setShip        ( pos2d pos, Ship & ship, char direction );
 		void  setBorder      ( pos2d pos );
 };

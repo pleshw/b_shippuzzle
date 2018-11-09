@@ -14,18 +14,17 @@
 class Game
 {
 	private:
-
 		BattleMap ActualMap;
 
 	public:
 		Game( BattleMap _actualMap)
 			: ActualMap ( _actualMap )
 			{/*EMPTY*/}
-		void        setMap   ( unsigned int n );
-		grid        getMap   ( void );
-		void        shoot    ( pos2d pos );
-		const bool  hit      ( pos2d pos );	
-		const Map   display  ( void );
+		void      setMap   ( unsigned int n );
+		Grid      getMap   ( void );
+		void      shoot    ( pos2d pos );
+		bool      hit      ( pos2d pos );	
+		const Map display  ( void );
 };
 
 
