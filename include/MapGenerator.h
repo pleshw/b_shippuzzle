@@ -12,7 +12,7 @@
 
 class MapGenerator{
 	public:
-		void      newMap      ( size_t width, size_t height ); //create a new map in mapList
+		void      newMap      ( size_t width, size_t height, Fleet fleet ); //create a new map in mapList
 		BattleMap getMap      ( size_t selector ) const;       //get map [selector] from mapList
 		BattleMap getFirst    ( void )            const;       //get the first map from mapList
 		BattleMap getLast     ( void )            const;       //get the last map from mapList
@@ -25,15 +25,9 @@ class MapGenerator{
 		void      removeAll   ( void );                        //remove all from mapList
 		
 	private:
-		GameSet        maplist;
+		GameSet        mapList;
 		std::ofstream  saveFile;
 		Map            freeSpots;
-		bool  isWater        ( pos2d pos, unsigned int size, char direction ) const;
-		bool  isShip         ( pos2d pos ) const;
-		bool  isFreePosition ( pos2d pos ) const;
-		bool  haveSpace      ( size_t size, char direction ) const;
-		void  setShip        ( pos2d pos, Ship & ship, char direction );
-		void  setBorder      ( pos2d pos );
 };
 
 #endif

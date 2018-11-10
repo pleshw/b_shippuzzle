@@ -20,7 +20,7 @@ struct Ship
 		{/*EMPTY*/}
 };
 
-using fleet = std::vector<Ship>;
+using Fleet = std::vector<Ship>;
 
 
 #endif

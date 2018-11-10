@@ -12,21 +12,30 @@ class BattleMap{
 	private:
 		size_t width;
 		size_t height;
-		
-		fleet  ships;
+		Grid   grid;
+		Fleet  ships;
 		void init  ( void );
 
 	public:
-		Grid   grid;
 		BattleMap( const size_t _width = 15, const size_t _height = 15 )
 			: width  ( _width ),
 			  height ( _height )
 			{ init(); }
 
-		size_t  getWidth     ( void )      const;
-		size_t  getHeight    ( void )      const;
-		char    getElement   ( pos2d pos ) const;
-		Map     getFreeSpots ( void )      const;
+		size_t getWidth      ( void )       const;
+		size_t getHeight     ( void )       const;
+		Map    getFreeSpots  ( void )       const;
+		char   getElement    ( pos2d pos )  const;
+		bool   isWater       ( pos2d pos )  const;
+		bool   isShip        ( pos2d pos )  const;
+		bool   isBorder      ( pos2d pos )  const;
+		bool   isMap         ( pos2d pos )  const;
+		bool   haveSpace     ( Ship ship )  const;
+
+		bool setShip    ( Ship ship );
+		bool setFleet   ( Fleet &fleet );
+		void setBorder  ( pos2d pos );
+
 
 		friend std::ostream &operator << ( std::ostream &os, const BattleMap &bm )
 		{ 
