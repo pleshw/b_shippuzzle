@@ -8,15 +8,14 @@
 
 struct Ship
 {
-	char       id;
-	size_t     size;
-	pos2d      position;
+	std::string  id;
+	size_t       size;
+	std::string  name;
 
-	enum class direction { VERTICAL = 0, HORIZONTAL };
-
-	Ship( char _id = '~', size_t _size = 1) 
+	Ship( std::string _id = "~", size_t _size = 1, std::string _name = "Ship") 
 		: id         ( _id ),
-		  size       ( _size )
+		  size       ( _size ),
+		  name       ( _name )
 		{/*EMPTY*/}
 };
 

@@ -6,7 +6,7 @@
 #include <iostream>
 #include <vector>
 
-using Grid = std::vector<std::vector<char>>;
+using Grid = std::vector<std::vector<std::string>>;
 
 class BattleMap{
 	private:
@@ -22,19 +22,19 @@ class BattleMap{
 			  height ( _height )
 			{ init(); }
 
-		size_t getWidth      ( void )       const;
-		size_t getHeight     ( void )       const;
-		Map    getFreeSpots  ( void )       const;
-		char   getElement    ( pos2d pos )  const;
-		bool   isWater       ( pos2d pos )  const;
-		bool   isShip        ( pos2d pos )  const;
-		bool   isBorder      ( pos2d pos )  const;
-		bool   isMap         ( pos2d pos )  const;
-		bool   haveSpace     ( Ship ship )  const;
+		size_t      getWidth      ( void ) const;
+		size_t      getHeight     ( void ) const;
+		Map         getFreeSpots  ( void ) const;
+		std::string getElement    ( pos2d pos ) const;
+		bool        isWater       ( pos2d pos ) const;
+		bool        isShip        ( pos2d pos ) const;
+		bool        isBorder      ( pos2d pos ) const;
+		bool        isMap         ( pos2d pos ) const;
+		bool        haveSpace     ( size_t size, pos2d position, Direction direction ) const;
 
-		bool setShip    ( Ship ship );
-		bool setFleet   ( Fleet &fleet );
-		void setBorder  ( pos2d pos );
+		bool setShip    ( Ship ship, pos2d position, Direction direction );
+		bool setFleet   ( Fleet &fleet, Map &map );
+		void setBorder  ( Ship ship, pos2d pos );
 
 
 		friend std::ostream &operator << ( std::ostream &os, const BattleMap &bm )

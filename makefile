@@ -17,6 +17,7 @@ build: $(_GEN_OBJS) $(_PLAY_OBJS)
 
 BattleMap.o: include/Position.h include/Ship.h
 	$(CC) -c src/BattleMap.cpp $(CPPFLAGS)
+	$(CC) src/BattleMap.cpp -o bm $(CPPFLAGS)
 
 MapGenerator.o: include/Position.h include/Ship.h include/BattleMap.h
 	$(CC) -c src/MapGenerator.cpp $(CPPFLAGS)

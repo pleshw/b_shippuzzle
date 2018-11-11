@@ -17,6 +17,8 @@ struct pos2d
 		{ os << p.x << " " << p.y; return os; }
 };
 
+enum class Direction { VERTICAL = 0, HORIZONTAL };
+
 using Map = std::vector<pos2d>;
 
 #endif
