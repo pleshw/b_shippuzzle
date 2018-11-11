@@ -34,7 +34,7 @@ class BattleMap{
 
 		bool setShip    ( Ship ship, pos2d position, Direction direction );
 		bool setFleet   ( Fleet &fleet, Map &map );
-		void setBorder  ( Ship ship, pos2d pos );
+		void setBorder  ( pos2d pos );
 
 
 		friend std::ostream &operator << ( std::ostream &os, const BattleMap &bm )
