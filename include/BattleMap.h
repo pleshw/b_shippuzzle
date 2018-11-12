@@ -5,6 +5,8 @@
 #include "Ship.h"
 #include <iostream>
 #include <vector>
+#include <cstdlib>
+#include <climits>
 
 using Grid = std::vector<std::vector<std::string>>;
 
@@ -33,9 +35,8 @@ class BattleMap{
 		bool        haveSpace     ( size_t size, pos2d position, Direction direction ) const;
 
 		bool setShip    ( Ship ship, pos2d position, Direction direction );
-		bool setFleet   ( Fleet &fleet, Map &map );
 		void setBorder  ( pos2d pos );
-
+		void setFleet   ( const Fleet &fleet, const Map &map, const Compass &compass );
 
 		friend std::ostream &operator << ( std::ostream &os, const BattleMap &bm )
 		{ 

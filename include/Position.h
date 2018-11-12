@@ -14,11 +14,12 @@ struct pos2d
 		{/*EMPTY*/}
 
 	friend std::ostream &operator << ( std::ostream &os, const pos2d &p )
-		{ os << p.x << " " << p.y; return os; }
+		{ os << "x: " << p.x << ", y: " << p.y; return os; }
 };
 
 enum class Direction { VERTICAL = 0, HORIZONTAL };
 
-using Map = std::vector<pos2d>;
+using Map     = std::vector<pos2d>;
+using Compass = std::vector<Direction>; 
 
 #endif

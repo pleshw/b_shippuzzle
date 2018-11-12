@@ -102,7 +102,7 @@ bool BattleMap::setShip ( Ship ship, pos2d pos, Direction direction )
 	return true;
 }
 
-//verify and place a border
+//verify the space and place a border
 void BattleMap::setBorder ( pos2d pos )
 {
 	int x = pos.x;
@@ -142,20 +142,57 @@ void BattleMap::setBorder ( pos2d pos )
 		grid[y+1][x+1] = ".";
 }
 
-
-int main()
+//verify and place a border
+void BattleMap::setFleet ( const Fleet &fleet, const Map &map, const Compass &compass ) //size needs to be the same
 {
-	BattleMap bm(15, 15);
-	std::cout << std::endl << bm << std::endl;
+	if( fleet.size() != map.size() || fleet.size() != compass.size() || compass.size() != map.size() )
+		return;
 
-	Ship Submarine  ( "s",  1, "Submarine" );
-	Ship BattleShip ( "S", 5, "Battle Ship" );
-
-	bm.setShip ( BattleShip, pos2d(0, 0),   Direction::VERTICAL );
-	bm.setShip ( BattleShip, pos2d(2, 0),   Direction::HORIZONTAL );
-	bm.setShip ( Submarine,  pos2d(14, 14), Direction::VERTICAL );
-
-	std::cout << std::endl << bm << std::endl;
-
-	return 0;
+	size_t counter = 0;
+	for(const Ship &unit : fleet) //para cada Ship (como unit) em fleet
+	{
+		setShip( unit, map[counter], compass[counter] );
+		counter++;
+	}
 }
+
+// int main()
+// {
+// 	BattleMap bm(15, 15);
+// 	std::cout << std::endl << bm << std::endl;
+
+// 	Ship Submarine  ( "s",  1, "Submarine" );
+// 	Ship BattleShip ( "S", 3, "Battle Ship" );
+
+// 	Fleet   f;
+// 	Map     m;
+// 	Compass c;
+
+// 	for(auto i(0); i < 12; i++)
+// 	{
+// 		if (i%2 == 0)
+// 		{
+// 			f.push_back    ( Submarine );
+// 			m.emplace_back ( i, 12 - i );
+// 			c.push_back    ( Direction::VERTICAL );
+// 		}else
+// 		{
+// 			f.push_back    ( BattleShip );
+// 			m.emplace_back ( 12 - i, i );
+// 			c.push_back    ( Direction::HORIZONTAL );
+// 		}
+// 	}
+
+// 	bm.setFleet(f, m, c);
+
+// 	for(const pos2d &posi : bm.getFreeSpots()) //para cada Ship (como unit) em fleet
+// 	{
+// 		std::cout << std::endl << "Free spot at " << posi << std::endl;
+// 	}
+
+	
+
+// 	std::cout << std::endl << bm << std::endl;
+
+// 	return 0;
+// }
