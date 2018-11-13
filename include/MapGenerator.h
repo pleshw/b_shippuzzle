@@ -10,9 +10,10 @@
 #include <fstream>
 #include <vector>
 
+using GameSet = std::vector<BattleMap>;
+
 class MapGenerator{
 	public:
-		void      newMap      ( size_t width, size_t height, Fleet fleet ); //create a new map in mapList
 		BattleMap getMap      ( size_t selector ) const;       //get map [selector] from mapList
 		BattleMap getFirst    ( void )            const;       //get the first map from mapList
 		BattleMap getLast     ( void )            const;       //get the last map from mapList
@@ -23,11 +24,14 @@ class MapGenerator{
 		void      saveAll     ( void );	                       //save all maps from mapList in saveFile
 		void      removeLast  ( void );                        //remove last from mapList
 		void      removeAll   ( void );                        //remove all from mapList
-		
+
+		MapGenerator ( void );
+			MapGenerator ( std::string _src );
+
 	private:
 		GameSet        mapList;
 		std::ofstream  saveFile;
-		Map            freeSpots;
+		bool           saveFileReady { false };
 };
 
 #endif

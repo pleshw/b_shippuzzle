@@ -53,6 +53,4 @@ class BattleMap{
 		}
 };
 
-using GameSet = std::vector<BattleMap>;
-
 #endif
